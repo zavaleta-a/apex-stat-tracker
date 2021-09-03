@@ -1,0 +1,9 @@
+video {
+  border: 3px solid #000;
+}
+
+#header-Text {
+  /* ADD A FALLBACK FONT FAMILY OPTION*/
+  font-family: "Special Elite";
+  margin-bottom: 0;
+}
