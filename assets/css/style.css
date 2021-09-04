@@ -1,11 +1,15 @@
+:root {
+  --secondayColor: rgb(26, 197, 26);
+}
+
 video {
-  border: 3px solid #000;
+  border: 3px solid var(--secondayColor);
 }
 
 .header-Text {
-  /* ADD A FALLBACK FONT FAMILY OPTION*/
+  /*ADD A FALLBACK FONT FAMILY OPTION*/
   font-family: "Special Elite";
-  margin-bottom: 0;
+  margin: 0;
 }
 
 #header-BottomText {
@@ -14,10 +18,18 @@ video {
   bottom: 5px;
 }
 
-header > div > div > ul > li {
+li {
   margin: 0 5px;
 }
 
-header > div > div > img {
+header > div > div > nav > img {
   height: 60px;
+}
+
+.pro-Text {
+  color: var(--secondayColor);
+}
+
+nav {
+  background-color: #000;
 }
