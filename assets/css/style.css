@@ -14,10 +14,10 @@ video {
   bottom: 5px;
 }
 
-header > nav > ul > li {
+header > div > div > ul > li {
   margin: 0 5px;
 }
 
-header > nav > img {
+header > div > div > img {
   height: 60px;
 }
