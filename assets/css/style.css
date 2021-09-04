@@ -22,7 +22,11 @@ li {
   margin: 0 5px;
 }
 
-header > div > div > nav > img {
+#search-Li::after {
+  content: "\1F50D";
+}
+
+header > div > div > nav > figure > div > img {
   height: 60px;
 }
 
@@ -32,4 +36,14 @@ header > div > div > nav > img {
 
 nav {
   background-color: #000;
+}
+
+figure {
+  display: flex;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+figure > ul {
+  margin-left: auto;
 }
