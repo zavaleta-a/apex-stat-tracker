@@ -4,6 +4,6 @@ $(function () {
     $("figure").css("display", "block");
     var insertBreak = $("<div></div>").append("<br />");
     $("#layout-Tablet").append(insertBreak);
-    $("ul").css({ position: "relative", left: "35%", display: "inline" });
+    $("ul").css({ position: "relative", left: "35%" });
   }
 });
