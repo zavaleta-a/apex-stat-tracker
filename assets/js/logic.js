@@ -8,7 +8,6 @@ $(function () {
       .removeClass("brand-logo center")
       .css({ position: "relative", left: "33%", fontSize: "2rem" });
     $("ul").addClass("col m2").css({ position: "relative", left: "32%" });
-    $("#about-Li").css({ position: "relative", left: "100px" });
     $("hr").remove();
   }
 });
