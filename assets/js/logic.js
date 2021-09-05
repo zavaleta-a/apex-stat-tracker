@@ -6,7 +6,7 @@ $(function () {
     $("#layout-Tablet").append(insertBreak);
     $("#logo")
       .removeClass("brand-logo center")
-      .css({ position: "relative", left: "33%", fontSize: "2rem" });
+      .css({ position: "relative", left: "33.5%", fontSize: "2rem" });
     $("ul").addClass("col m2").css({ position: "relative", left: "42%" });
     $("li").css("margin-bottom", "-10px");
     $("hr").remove();
