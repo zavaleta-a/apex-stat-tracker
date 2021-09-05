@@ -1,7 +1,7 @@
 $(function () {
-  var mq = matchMedia("(max-width: 1200px)");
+  var mq = matchMedia("(max-width: 1080px)");
   if (mq.matches) {
-    $("figure").css("display", "block");
+    $("figure").css("display", "inline-block");
     var insertBreak = /*$("<div></div>").append*/ $("<br />");
     $("#layout-Tablet").append(insertBreak);
     $("#logo")
