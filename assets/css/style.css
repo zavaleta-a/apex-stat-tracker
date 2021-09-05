@@ -22,9 +22,9 @@ li {
   margin: 0 5px;
 }
 
-#search-Li::after {
+/*#search-Li::after {
   content: "\1F50D";
-}
+}*/
 
 header > div > div > nav > figure > div > img {
   height: 60px;
