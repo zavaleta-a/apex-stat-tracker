@@ -8,7 +8,7 @@ video {
 
 .header-Text {
   /*ADD A FALLBACK FONT FAMILY OPTION*/
-  font-family: "Special Elite";
+  font-family: "Special Elite", sans-serif;
   margin: 0;
 }
 

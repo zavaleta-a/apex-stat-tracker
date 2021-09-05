@@ -1,5 +1,5 @@
 $(function () {
-  var mq = matchMedia("(max-width: 1200px)");
+  var mq = matchMedia("(max-width: 1460px)");
   if (mq.matches) {
     $("figure").css("display", "block");
     var insertBreak = $("<div></div>").append("<br />");
