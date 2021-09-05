@@ -4,7 +4,7 @@ $(function () {
     $("figure").css("display", "inline-block");
     $("#logo")
       .removeClass("brand-logo center")
-      .css({ position: "relative", left: "33.5%", fontSize: "2rem" });
+      .css({ position: "relative", left: "35%", fontSize: "2rem" });
     $("#ul-Background").css("background-color", "green");
     $("ul").addClass("col s3").css({ position: "relative", left: "42%" });
     $("li").css("margin-bottom", "-10px");
