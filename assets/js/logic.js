@@ -7,7 +7,8 @@ $(function () {
     $("#logo")
       .removeClass("brand-logo center")
       .css({ position: "relative", left: "33%", fontSize: "2rem" });
-    $("ul").addClass("col m2").css({ position: "relative", left: "32%" });
+    $("ul").addClass("col m2").css({ position: "relative", left: "42%" });
+    $("li").css("margin-bottom", "-10px");
     $("hr").remove();
   }
 });
