@@ -1,5 +1,5 @@
 $(function () {
-  var mq = matchMedia("(max-width: 1080px)");
+  var mq = matchMedia("(max-width: 1200px)");
   if (mq.matches) {
     $("figure").css("display", "inline-block");
     $("#logo")
