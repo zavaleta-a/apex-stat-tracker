@@ -25,10 +25,16 @@ li:hover {
   }
 }
 
+/* Desktop Layout */
+
 @media screen and (max-width: 1920px) {
   #brand-Logo {
     width: 4%;
     height: 4rem;
+  }
+
+  video {
+    width: 100%;
   }
 }
 
@@ -40,12 +46,22 @@ li:hover {
   .flex-Container {
     margin-top: 5px;
   }
+
+  video {
+    width: 100%;
+  }
 }
+
+/* Tablet Layout */
 
 @media screen and (max-width: 991px) {
   #brand-Logo {
     width: 8%;
     height: 4rem;
+  }
+
+  video {
+    width: 100%;
   }
 }
 
@@ -57,12 +73,21 @@ li:hover {
   .flex-Container {
     margin-top: 5px;
   }
+
+  video {
+    width: 100%;
+  }
 }
 
+/* Mobile Layout */
 @media screen and (max-width: 600px) {
   #brand-Logo {
     width: 15%;
     height: 4rem;
+  }
+
+  video {
+    width: 100%;
   }
 }
 
@@ -70,6 +95,10 @@ li:hover {
   #brand-Logo {
     width: 20%;
     height: 4rem;
+  }
+
+  video {
+    width: 100%;
   }
 }
 
