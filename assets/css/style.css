@@ -10,6 +10,14 @@ li {
   margin: 0px 5px;
 }
 
+li:hover {
+  background-color: red;
+}
+
+.video h3 {
+  text-align: center;
+}
+
 @media screen and (min-width: 1201px) {
   #brand-Logo {
     width: 7%;
@@ -69,5 +77,9 @@ li {
   #brand-Logo {
     width: 30%;
     height: 4rem;
+  }
+
+  video {
+    width: 100%;
   }
 }
