@@ -18,6 +18,16 @@ li:hover {
   text-align: center;
 }
 
+#top-Text {
+  position: relative;
+  top: 18px;
+}
+
+#bottom-Text {
+  position: relative;
+  bottom: 35px;
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
