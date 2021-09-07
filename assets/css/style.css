@@ -48,13 +48,18 @@ figure > ul {
   margin-left: auto;
 }
 
-/*#step1 {
-  width: 15%;
-  height: 240px;
-  border: solid 2px black;
-  border-radius: 50%;
-  position: absolute;
-  left: 20px;
-  background-image: linear-gradient(to right, green, white);
-  text-align: center;
-}*/
+@media screen and (max-width: 1200px) {
+  figure {
+    display: inline-block;
+  }
+
+  #logo {
+    position: relative;
+    left: 35%;
+    font-size: 2rem;
+  }
+
+  #ul-Background {
+    background-color: #05b105;
+  }
+}

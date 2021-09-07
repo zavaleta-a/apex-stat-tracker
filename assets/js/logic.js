@@ -1,13 +1,8 @@
 $(function () {
   var mq = matchMedia("(max-width: 1200px)");
   if (mq.matches) {
-    $("figure").css("display", "inline-block");
-    $("#logo")
-      .removeClass("brand-logo center")
-      .css({ position: "relative", left: "35%", fontSize: "2rem" });
-    $("#ul-Background").css("background-color", "green");
-    $("ul").addClass("col s3").css({ position: "relative", left: "42%" });
-    $("li").css("margin-bottom", "-10px");
+    $("#logo").removeClass("brand-logo center");
+    $("ul").addClass("col md3");
     $("hr").remove();
   } else {
     $("ul").css({ display: "flex", position: "relative", left: "73%" });
