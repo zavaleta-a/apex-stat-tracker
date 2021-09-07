@@ -18,14 +18,14 @@ li:hover {
   text-align: center;
 }
 
+/* Desktop Layout */
+
 @media screen and (min-width: 1201px) {
   #brand-Logo {
     width: 7%;
     height: 4rem;
   }
 }
-
-/* Desktop Layout */
 
 @media screen and (max-width: 1920px) {
   #brand-Logo {
