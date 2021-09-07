@@ -1,5 +1,13 @@
 @media screen and (max-width: 600px) {
+  #brand-Logo {
+    width: 15%;
+  }
+
   li {
     margin: 0px 5px;
+  }
+
+  .flex-Container {
+    display: flex;
   }
 }
