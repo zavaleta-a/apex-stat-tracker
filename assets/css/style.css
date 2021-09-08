@@ -16,7 +16,6 @@ li:hover {
 
 #top-Text {
   font-family: "Special Elite", sans-serif;
-  text-align: center;
   position: relative;
   top: 18px;
   border-bottom: solid 2px #ff0000;
@@ -24,7 +23,6 @@ li:hover {
 
 #bottom-Text {
   font-family: "Special Elite", sans-serif;
-  text-align: center;
   position: relative;
   bottom: 34px;
   border-top: solid 2px #ff0000;
@@ -34,8 +32,17 @@ span {
   color: #ff0000;
 }
 
+#rapid-API-Search-Section {
+  border: solid 2px black;
+  border-radius: 10%;
+}
+
 #step1 {
   background-image: linear-gradient(red, black);
+}
+
+#step1 h5 {
+  text-decoration: underline;
 }
 
 /* Desktop Layout */
@@ -151,7 +158,7 @@ span {
   #step1 {
     border: solid 2px black;
     border-radius: 50%;
-    width: 53%;
+    width: 60%;
     height: 200px;
     margin: 0 auto;
   }
