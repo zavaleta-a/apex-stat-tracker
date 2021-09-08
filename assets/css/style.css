@@ -37,14 +37,6 @@ span {
   border-radius: 10%;
 }
 
-#step1 {
-  background-image: linear-gradient(red, black);
-}
-
-#step1 h5 {
-  text-decoration: underline;
-}
-
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
@@ -116,14 +108,6 @@ span {
   video {
     width: 100%;
   }
-
-  #step1 {
-    border: solid 2px black;
-    border-radius: 50%;
-    width: 43%;
-    height: 215px;
-    margin: 0 auto;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -135,14 +119,6 @@ span {
   video {
     width: 100%;
   }
-
-  #step1 {
-    border: solid 2px black;
-    border-radius: 50%;
-    width: 48%;
-    height: 190px;
-    margin: 0 auto;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -153,13 +129,5 @@ span {
 
   video {
     width: 100%;
-  }
-
-  #step1 {
-    border: solid 2px black;
-    border-radius: 50%;
-    width: 60%;
-    height: 200px;
-    margin: 0 auto;
   }
 }
