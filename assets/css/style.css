@@ -11,26 +11,31 @@ li {
 }
 
 li:hover {
-  background-color: red;
-}
-
-video {
-  border-top: solid 5px red;
-  border-bottom: solid 5px red;
-}
-
-.video h3 {
-  text-align: center;
+  background-color: #ff0000;
 }
 
 #top-Text {
+  font-family: "Special Elite", sans-serif;
+  text-align: center;
   position: relative;
   top: 18px;
+  border-bottom: solid 2px #ff0000;
 }
 
 #bottom-Text {
+  font-family: "Special Elite", sans-serif;
+  text-align: center;
   position: relative;
-  bottom: 35px;
+  bottom: 34px;
+  border-top: solid 2px #ff0000;
+}
+
+span {
+  color: #ff0000;
+}
+
+#step1 {
+  background-image: linear-gradient(red, black);
 }
 
 /* Desktop Layout */
@@ -104,6 +109,14 @@ video {
   video {
     width: 100%;
   }
+
+  #step1 {
+    border: solid 2px black;
+    border-radius: 50%;
+    width: 43%;
+    height: 190px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -115,6 +128,14 @@ video {
   video {
     width: 100%;
   }
+
+  #step1 {
+    border: solid 2px black;
+    border-radius: 50%;
+    width: 48%;
+    height: 190px;
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -125,5 +146,13 @@ video {
 
   video {
     width: 100%;
+  }
+
+  #step1 {
+    border: solid 2px black;
+    border-radius: 50%;
+    width: 50%;
+    height: 190px;
+    margin: 0 auto;
   }
 }
