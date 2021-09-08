@@ -32,9 +32,12 @@ span {
   color: #ff0000;
 }
 
-#rapid-API-Search-Section {
+#searchByName-Area {
   border: solid 2px black;
-  border-radius: 10%;
+  border-radius: 50%;
+  width: 60%;
+  height: 200px;
+  margin: 0 auto;
 }
 
 /* Desktop Layout */
