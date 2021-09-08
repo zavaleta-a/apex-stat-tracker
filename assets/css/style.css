@@ -36,6 +36,13 @@ hr {
   width: 50%;
 }
 
+#player-SearchBox {
+  border: solid 2px black;
+  width: 75%;
+  height: 100px;
+  margin: 0 auto;
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
