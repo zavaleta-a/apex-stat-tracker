@@ -28,7 +28,7 @@ li:hover {
   border-top: solid 2px #ff0000;
 }
 
-span {
+.pros-Text {
   color: #ff0000;
 }
 
@@ -41,6 +41,12 @@ hr {
   width: 75%;
   height: 100px;
   margin: 0 auto;
+}
+
+label {
+  font-weight: bolder;
+  color: black;
+  font-size: 1rem;
 }
 
 /* Desktop Layout */
