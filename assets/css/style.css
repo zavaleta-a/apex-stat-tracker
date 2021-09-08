@@ -32,12 +32,8 @@ span {
   color: #ff0000;
 }
 
-#searchByName-Area {
-  border: solid 2px black;
-  border-radius: 50%;
-  width: 60%;
-  height: 200px;
-  margin: 0 auto;
+hr {
+  width: 50%;
 }
 
 /* Desktop Layout */
