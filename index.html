@@ -36,42 +36,51 @@
         </ul>
         <div class="flex-Container">
           Apex
-          <img id="brand-Logo" src="./apex.png" />
+          <img id="brand-Logo" src="./Images/apex.png" />
           Legends
         </div>
       </nav>
     </header>
-    <!--Video Section-->
-    <section class="container video">
-      <h3 id="top-Text" class="white-text black center-align">
-        <span class="pros-Text">Pros</span> Check Their Stats
-      </h3>
-      <video autoplay muted loop>
-        <source src="./apex-gameplay-compressed.mp4" />
-      </video>
-      <h3 id="bottom-Text" class="white-text black center-align">
-        Are You Ready To Go <span class="pros-Text">Pro</span>?
-      </h3>
-    </section>
+    <main>
+      <!-- Left and Right Banners -->
+      <section class="banner-left">
+        <img
+          src="./Images/mirage-banner.png"
+          class="mir-banner"
+          alt="Image of Apex Legend Revenant"
+        />
+      </section>
+      <!--Video Section-->
+      <section class="container video">
+        <h3 id="top-Text" class="white-text black center-align">
+          <span class="pros-Text">Pros</span> Check Their Stats
+        </h3>
+        <video autoplay muted loop>
+          <source src="./apex-gameplay-compressed.mp4" />
+        </video>
+        <h3 id="bottom-Text" class="white-text black center-align">
+          Are You Ready To Go <span class="pros-Text">Pro</span>?
+        </h3>
+      </section>
+      <section class="banner-right">
+        <img
+          src="./Images/pathfinder-banner.jpg"
+          class="path-banner"
+          alt="Image of Apex Legend Pathfinder"
+        />
+      </section>
+    </main>
     <!--RAPID API (SEARCH SECTION)--><!--MOBILE RESPONSIVENESS DONE-->
-    <section>
-      <div id="rapid-API-Search-Section" class="container row">
-        <!--Start Of Column-->
-        <div class="col s12">
-          <h3 class="center-align">Search By Player Name</h3>
-        </div>
-        <!--End Of Column-->
-      </div>
+    <section class="search-bar">
       <hr />
       <div class="container row">
         <div>
-          <div id="player-SearchBox">
-            <div class="col s12 center-align">
-              <h6 class="center-align">Playstation 4</h6>
-              <br />
-              <label>Player Name: </label><input type="username" />
+          <div id="player-SearchBox" class="wrap">
+            <div class="col s12 center-align" id="search">
+              <input type="text" class="search-ter" placeholder="Player Name" />
+              <span class="search-button"></span
+              ><span class="search-icon"></span>
             </div>
-            <label>Player Name:</label><input type="username" />
           </div>
         </div>
       </div>

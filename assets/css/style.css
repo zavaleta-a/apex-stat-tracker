@@ -1,9 +1,66 @@
+body {
+  background: linear-gradient(
+    -45deg,
+    rgb(245, 220, 188),
+    rgb(190, 169, 140),
+    rgb(114, 93, 65),
+    rgb(228, 172, 100)
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 nav {
   background-color: #000;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-Container {
   display: flex;
+}
+
+.banner-left {
+  border: solid black 2px;
+  height: 1000px;
+  width: 300px;
+}
+
+.mir-banner {
+  height: 996px;
+  width: 296px;
+}
+
+.banner-right {
+  border: solid black 2px;
+  height: 1000px;
+  width: 300px;
+}
+
+.path-banner {
+  height: 996px;
+  width: 296px;
+}
+
+.search-bar {
+  position: relative;
+  bottom: 125px;
 }
 
 li {
@@ -41,6 +98,7 @@ hr {
   width: 75%;
   height: 100px;
   margin: 0 auto;
+  background-color: rgb(77, 77, 77);
 }
 
 label {
@@ -48,6 +106,7 @@ label {
   color: black;
   font-size: 1rem;
 }
+
 
 /* Desktop Layout */
 
