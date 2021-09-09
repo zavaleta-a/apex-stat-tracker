@@ -37,7 +37,10 @@ hr {
 }
 
 /*About Us CSS Styling */
-
+.container-aboutUs {
+  text-align: center;
+  padding: 10xp;
+}
 /*About Us CSS Styling */
 /* ------------------- */
 
