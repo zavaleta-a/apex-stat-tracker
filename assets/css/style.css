@@ -51,6 +51,7 @@ label {
 
 #player-SearchBox > h6 {
   font-weight: bolder;
+  text-decoration: underline;
 }
 
 /* Desktop Layout */
@@ -98,6 +99,14 @@ label {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 55.83px;
+  }
 }
 
 @media screen and (max-width: 601px) {
@@ -111,6 +120,14 @@ label {
 
   video {
     width: 100%;
+  }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 55.83px;
   }
 }
 
