@@ -39,7 +39,7 @@ hr {
 #player-SearchBox {
   border: solid 2px black;
   width: 75%;
-  height: 100px;
+  height: 110px;
   margin: 0 auto;
 }
 
@@ -47,10 +47,6 @@ label {
   font-weight: bolder;
   color: black;
   font-size: 1rem;
-}
-
-#video-Background {
-  position: absolute;
 }
 
 #player-SearchBox > h6 {
@@ -128,6 +124,14 @@ label {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -139,12 +143,28 @@ label {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   #brand-Logo {
     width: 30%;
     height: 4rem;
+  }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
   }
 
   video {
