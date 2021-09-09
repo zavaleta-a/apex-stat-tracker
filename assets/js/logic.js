@@ -10,4 +10,7 @@ $(function () {
   if (mq1.matches) {
     $(".console-Container").addClass("col l4 center-align");
   }
+
+  
+
 });
