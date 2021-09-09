@@ -119,15 +119,6 @@ label {
   video {
     width: 100%;
   }
-
-  #xbox {
-    margin-right: 40px;
-  }
-
-  #pc {
-    margin-right: 54.7px;
-    margin-bottom: 6px;
-  }
 }
 
 @media screen and (max-width: 601px) {
@@ -142,15 +133,6 @@ label {
   video {
     width: 100%;
   }
-
-  #xbox {
-    margin-right: 40px;
-  }
-
-  #pc {
-    margin-right: 54.7px;
-    margin-bottom: 6px;
-  }
 }
 
 /* Mobile Layout */
@@ -163,15 +145,6 @@ label {
   video {
     width: 100%;
   }
-
-  #xbox {
-    margin-right: 40px;
-  }
-
-  #pc {
-    margin-right: 54.7px;
-    margin-bottom: 6px;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -183,30 +156,12 @@ label {
   video {
     width: 100%;
   }
-
-  #xbox {
-    margin-right: 40px;
-  }
-
-  #pc {
-    margin-right: 54.7px;
-    margin-bottom: 8px;
-  }
 }
 
 @media screen and (max-width: 400px) {
   #brand-Logo {
     width: 30%;
     height: 4rem;
-  }
-
-  #xbox {
-    margin-right: 40px;
-  }
-
-  #pc {
-    margin-right: 54.7px;
-    margin-bottom: 6px;
   }
 
   video {
