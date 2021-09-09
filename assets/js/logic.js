@@ -14,13 +14,26 @@ $(function () {
   $("#complete-Button").on("click", function (event) {
     event.preventDefault();
 
+    var playerSearchBox = $("#player-SearchBox");
+
     if ($("#PSN").is(":checked")) {
-      var playerSearchBox = $("#player-SearchBox");
       playerSearchBox.empty();
       var playstationSearch = $("<h6></h6>")
         .html("Playstation Database")
         .addClass("center-align");
       playerSearchBox.append(playstationSearch);
+    } else if ($("#XBOX").is(":checked")) {
+      playerSearchBox.empty();
+      var xboxSearch = $("<h6></h6>")
+        .html("Xbox Database")
+        .addClass("center-align");
+      playerSearchBox.append(xboxSearch);
+    } else {
+      playerSearchBox.empty();
+      var pcSearch = $("<h6></h6>")
+        .html("PC Database")
+        .addClass("center-align");
+      playerSearchBox.append(pcSearch);
     }
   });
 });
