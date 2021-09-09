@@ -74,6 +74,10 @@ label {
   text-decoration: underline;
 }
 
+#video-Container {
+  background-color: rgb(194, 194, 194);
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
@@ -108,9 +112,15 @@ label {
   }
 }
 
+@media screen and (min-width: 993px) {
+  #complete-Button {
+    margin-top: 80px;
+  }
+}
+
 /* Tablet Layout */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   #brand-Logo {
     width: 8%;
     height: 4rem;
@@ -119,9 +129,18 @@ label {
   video {
     width: 100%;
   }
+
+  #pc {
+    margin-bottom: 6px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 42%;
+  }
 }
 
-@media screen and (max-width: 601px) {
+/*@media screen and (width: 601px) {
   #brand-Logo {
     width: 18%;
     height: 4rem;
@@ -132,6 +151,15 @@ label {
 
   video {
     width: 100%;
+  }
+
+  #pc {
+    margin-bottom: 6px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
   }
 }
 
@@ -145,6 +173,15 @@ label {
   video {
     width: 100%;
   }
+
+  #pc {
+    margin-bottom: 6px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -156,12 +193,30 @@ label {
   video {
     width: 100%;
   }
+
+  #pc {
+    margin-bottom: 8px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
+  }
 }
 
 @media screen and (max-width: 400px) {
   #brand-Logo {
     width: 30%;
     height: 4rem;
+  }
+
+  #pc {
+    margin-bottom: 6px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 27%;
   }
 
   video {
