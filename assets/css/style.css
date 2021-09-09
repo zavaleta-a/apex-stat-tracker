@@ -54,6 +54,10 @@ label {
   text-decoration: underline;
 }
 
+#video-Container {
+  background-color: rgb(194, 194, 194);
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
