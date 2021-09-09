@@ -103,6 +103,11 @@ label {
   #pc {
     margin-bottom: 6px;
   }
+
+  .console-Container {
+    position: relative;
+    left: 42%;
+  }
 }
 
 @media screen and (max-width: 601px) {
@@ -121,6 +126,11 @@ label {
   #pc {
     margin-bottom: 6px;
   }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
+  }
 }
 
 /* Mobile Layout */
@@ -137,6 +147,11 @@ label {
   #pc {
     margin-bottom: 6px;
   }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -152,6 +167,11 @@ label {
   #pc {
     margin-bottom: 8px;
   }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -162,6 +182,11 @@ label {
 
   #pc {
     margin-bottom: 6px;
+  }
+
+  .console-Container {
+    position: relative;
+    left: 32%;
   }
 
   video {
