@@ -88,9 +88,15 @@ label {
   }
 }
 
+@media screen and (min-width: 993px) {
+  #complete-Button {
+    margin-top: 80px;
+  }
+}
+
 /* Tablet Layout */
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 992px) {
   #brand-Logo {
     width: 8%;
     height: 4rem;
@@ -110,7 +116,7 @@ label {
   }
 }
 
-@media screen and (max-width: 601px) {
+/*@media screen and (width: 601px) {
   #brand-Logo {
     width: 18%;
     height: 4rem;
