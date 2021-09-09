@@ -43,7 +43,8 @@ hr {
 }
 
 #aboutUsText {
-  box-sizing: content-box;
+  shape-outside: content-box;
+  shape-image-threshold: inherit(10xp, 0xp);
   width: 50%;
   height: 50%;
   border: solid #ff0000;
@@ -53,6 +54,7 @@ hr {
   top: 175px;
   left: 50px;
 }
+
 /*About Us CSS Styling */
 /* ------------------- */
 
