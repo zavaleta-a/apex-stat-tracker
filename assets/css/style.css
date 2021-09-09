@@ -41,6 +41,16 @@ hr {
   text-align: center;
   padding: 10xp;
 }
+
+p {
+  box-sizing: content-box;
+  width: 50%;
+  height: 50%;
+  border: solid #ff0000;
+  text-align: center;
+  margin: auto;
+
+}
 /*About Us CSS Styling */
 /* ------------------- */
 
