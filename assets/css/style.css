@@ -28,7 +28,7 @@ li:hover {
   border-top: solid 2px #ff0000;
 }
 
-span {
+.pros-Text {
   color: #ff0000;
 }
 
@@ -55,6 +55,24 @@ hr {
 }
 /*About Us CSS Styling */
 /* ------------------- */
+
+#player-SearchBox {
+  border: solid 2px black;
+  width: 75%;
+  height: 145px;
+  margin: 0 auto;
+}
+
+label {
+  font-weight: bolder;
+  color: black;
+  font-size: 1rem;
+}
+
+#player-SearchBox > h6 {
+  font-weight: bolder;
+  text-decoration: underline;
+}
 
 /* Desktop Layout */
 
@@ -101,6 +119,15 @@ hr {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+    margin-bottom: 6px;
+  }
 }
 
 @media screen and (max-width: 601px) {
@@ -115,6 +142,15 @@ hr {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+    margin-bottom: 6px;
+  }
 }
 
 /* Mobile Layout */
@@ -127,6 +163,15 @@ hr {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+    margin-bottom: 6px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -138,12 +183,30 @@ hr {
   video {
     width: 100%;
   }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   #brand-Logo {
     width: 30%;
     height: 4rem;
+  }
+
+  #xbox {
+    margin-right: 40px;
+  }
+
+  #pc {
+    margin-right: 54.7px;
+    margin-bottom: 6px;
   }
 
   video {
