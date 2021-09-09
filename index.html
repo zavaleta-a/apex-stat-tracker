@@ -42,17 +42,19 @@
       </nav>
     </header>
     <!--Video Section-->
-    <section class="container video">
-      <h3 id="top-Text" class="white-text black center-align">
-        <span class="pros-Text">Pros</span> Check Their Stats
-      </h3>
-      <video autoplay muted loop>
-        <source src="./apex-gameplay-compressed.mp4" />
-      </video>
-      <h3 id="bottom-Text" class="white-text black center-align">
-        Are You Ready To Go <span class="pros-Text">Pro</span>?
-      </h3>
-    </section>
+    <div id="video-Container">
+      <section class="container video">
+        <h3 id="top-Text" class="white-text black center-align">
+          <span class="pros-Text">Pros</span> Check Their Stats
+        </h3>
+        <video autoplay muted loop>
+          <source src="./apex-gameplay-compressed.mp4" />
+        </video>
+        <h3 id="bottom-Text" class="white-text black center-align">
+          Are You Ready To Go <span class="pros-Text">Pro</span>?
+        </h3>
+      </section>
+    </div>
     <!--RAPID API (SEARCH SECTION)--><!--MOBILE RESPONSIVENESS DONE-->
     <section>
       <div id="rapid-API-Search-Section" class="container row">
@@ -64,14 +66,12 @@
       </div>
       <hr />
       <div class="container row">
-        <div>
-          <div id="player-SearchBox">
-            <div class="col s12 center-align">
-              <h6 class="center-align">Playstation 4</h6>
-              <br />
-              <label>Player Name: </label><input type="username" />
-            </div>
-          </div>
+        <div id="player-SearchBox" class="center-align">
+          <h6 class="center-align">Console Type</h6>
+          <label>
+            <input name="PSN" type="radio" />
+            <span>Playstation</span>
+          </label>
         </div>
       </div>
     </section>

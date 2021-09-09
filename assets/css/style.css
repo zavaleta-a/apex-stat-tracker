@@ -49,6 +49,14 @@ label {
   font-size: 1rem;
 }
 
+#video-Background {
+  position: absolute;
+}
+
+#player-SearchBox > h6 {
+  font-weight: bolder;
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
