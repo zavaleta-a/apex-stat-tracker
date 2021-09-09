@@ -15,6 +15,7 @@ $(function () {
     event.preventDefault();
 
     var playerSearchBox = $("#player-SearchBox");
+    var insertBreak = $("<br />");
 
     if ($("#PSN").is(":checked")) {
       playerSearchBox.empty();
@@ -22,6 +23,14 @@ $(function () {
         .html("Playstation Database")
         .addClass("center-align");
       playerSearchBox.append(playstationSearch);
+      playerSearchBox.append(insertBreak);
+      var playerNameLabel = $("<label id='PSN-ID'>PSN ID: </label>");
+      var playerNameInput = $("<input id='searchBar' type='username' />");
+      playerSearchBox.append(playerNameLabel);
+      playerSearchBox.append(playerNameInput);
+      /*var playerSearchButton = $("<button>search</button>");
+      playerSearchBox.append(insertBreak);
+      playerSearchBox.append(playerSearchButton);*/
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
       var xboxSearch = $("<h6></h6>")
