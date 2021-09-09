@@ -42,13 +42,16 @@ hr {
   padding: 10xp;
 }
 
-p {
+#aboutUsText {
   box-sizing: content-box;
   width: 50%;
   height: 50%;
   border: solid #ff0000;
   text-align: center;
   margin: auto;
+  position: relative;
+  top: 175px;
+  left: 50px;
 }
 /*About Us CSS Styling */
 /* ------------------- */
