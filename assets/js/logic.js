@@ -6,8 +6,9 @@ $(function () {
     $("#brand-Logo").css("width", "23%");
   }
 
-  var mq1 = matchMedia("(max-width: 600px)");
+  var mq1 = matchMedia("(min-width: 1200px)");
   if (mq1.matches) {
-    
+    $(".console-Container").addClass("col l4");
+    // Make player-SearchBox smaller && keep button on bottom of container //
   }
 });
