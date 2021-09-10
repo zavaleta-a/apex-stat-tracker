@@ -179,9 +179,6 @@ label {
     position: relative;
     left: 32%;
   }
-
-  #PSN-Search {
-  }
 }
 
 @media screen and (max-width: 400px) {

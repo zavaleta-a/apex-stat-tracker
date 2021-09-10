@@ -11,7 +11,7 @@ $(function () {
     $(".console-Container").addClass("col l4 center-align");
   }
 
-  $("#complete-Button").on("click", function (event) {
+  $("#continue-Button").on("click", function (event) {
     event.preventDefault();
 
     var playerSearchBox = $("#player-SearchBox");
@@ -25,8 +25,8 @@ $(function () {
         .addClass("center-align");
       playerSearchBox.append(playstationSearch);
       playerSearchBox.append(insertBreak);
-      var playerNameLabel = $("<label id='PSN-ID'>PSN ID: </label>");
-      var playerNameInput = $("<input id='PSN-Search' type='username' />");
+      var playerNameLabel = $("<label>PSN ID: </label>");
+      var playerNameInput = $("<input type='username' />");
       playerSearchBox.append(playerNameLabel);
       playerSearchBox.append(playerNameInput);
       var playerSearchButton = $("<button>search</button>");
@@ -45,5 +45,26 @@ $(function () {
         .addClass("center-align");
       playerSearchBox.append(pcSearch);
     }
+
+    playerSearchButton.on("click", function (event) {
+      event.preventDefault();
+
+      fetch("https://apex-legends.p.rapidapi.com/stats/imshleepdawg/PS4", {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "apex-legends.p.rapidapi.com",
+          "x-rapidapi-key":
+            "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+        },
+      })
+        .then(function (resp) {
+          return resp.json();
+        })
+        .then(function (data) {
+          console.log(data);
+        });
+
+      // END OF FETCH//
+    });
   });
 });
