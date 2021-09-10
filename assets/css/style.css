@@ -41,18 +41,25 @@ hr {
   text-align: center;
   padding: 10xp;
 }
+#robot {
+  height: 25%;
+  width: 350px;
+  border-radius: 50%;
+  border: solid;
+  text-align: center;
+  float: left;
+  shape-outside: circle();
+  shape-margin: 1rem;
+  display: inline-block;
+}
 
 #aboutUsText {
-  shape-outside: content-box;
-  shape-image-threshold: inherit(10xp, 0xp);
+  position: absolute;
+  left: 360px;
+  top: 250px;
   width: 50%;
-  height: 50%;
-  border: solid #ff0000;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  top: 175px;
-  left: 50px;
+  height: auto;
+  font-size: 18px;
 }
 
 /*About Us CSS Styling */
