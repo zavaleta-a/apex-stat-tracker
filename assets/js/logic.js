@@ -25,10 +25,10 @@ $(function () {
         .addClass("center-align");
       playerSearchBox.append(playstationSearch);
       playerSearchBox.append(insertBreak);
-      var playerNameLabel = $("<label>PSN ID: </label>");
-      var playerNameInput = $("<input type='username' />");
-      playerSearchBox.append(playerNameLabel);
-      playerSearchBox.append(playerNameInput);
+      var playerNameLabelPSN = $("<label>PSN ID: </label>");
+      var playerNameInputPSN = $("<input type='username' />");
+      playerSearchBox.append(playerNameLabelPSN);
+      playerSearchBox.append(playerNameInputPSN);
       var playerSearchButton = $(
         "<button id='checkPlayerData'>search</button>"
       );
@@ -36,16 +36,36 @@ $(function () {
       playerSearchBox.append(playerSearchButton);
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
+      playerSearchBox.addClass("center-align");
       var xboxSearch = $("<h6></h6>")
         .html("Xbox Database")
         .addClass("center-align");
       playerSearchBox.append(xboxSearch);
+      var playerNameLabelXbox = $("<label>GamerTag: </label>");
+      var playerNameInputXbox = $("<input type='username' />");
+      playerSearchBox.append(playerNameLabelXbox);
+      playerSearchBox.append(playerNameInputXbox);
+      var playerSearchButton = $(
+        "<button id='checkPlayerData'>search</button>"
+      );
+      playerSearchBox.append(insertBreak);
+      playerSearchBox.append(playerSearchButton);
     } else if ($("#PC").is(":checked")) {
       playerSearchBox.empty();
+      playerSearchBox.addClass("center-align");
       var pcSearch = $("<h6></h6>")
         .html("PC Database")
         .addClass("center-align");
       playerSearchBox.append(pcSearch);
+      var playerNameLabelPc = $("<label>Username: </label>");
+      var playerNameInputPc = $("<input type='username' />");
+      playerSearchBox.append(playerNameLabelPc);
+      playerSearchBox.append(playerNameInputPc);
+      var playerSearchButton = $(
+        "<button id='checkPlayerData'>search</button>"
+      );
+      playerSearchBox.append(insertBreak);
+      playerSearchBox.append(playerSearchButton);
     } else {
       // WHAT HAPPENS IF NO CONSOLE TYPE IS SELECTED????? //
     }
@@ -55,11 +75,11 @@ $(function () {
 
       var url = "https://apex-legends.p.rapidapi.com/stats/imshleepdawg/PS4";
 
-      if (playerNameInput.val() !== "") {
+      if (playerNameInputPSN.val() !== "") {
         url = url.slice(54);
         url =
           "https://apex-legends.p.rapidapi.com/stats/" +
-          playerNameInput.val() +
+          playerNameInputPSN.val() +
           "/PS4";
         fetch(url, {
           method: "GET",
@@ -77,7 +97,7 @@ $(function () {
           });
         // END OF FETCH //
       } else {
-        playerNameInput.css({
+        playerNameInputPSN.css({
           borderStyle: "solid",
           borderWidth: "2px",
           borderColor: "red",
