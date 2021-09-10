@@ -38,6 +38,8 @@ hr {
 
 /*About Us CSS Styling */
 .container-aboutUs {
+  font-weight: bolder;
+  font-size: 25px;
   text-align: center;
   padding: 10xp;
 }
