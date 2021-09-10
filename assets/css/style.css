@@ -136,7 +136,7 @@ label {
 
   .console-Container {
     position: relative;
-    left: 42%;
+    left: 30%;
   }
 }
 
@@ -159,14 +159,9 @@ label {
     position: relative;
     left: 32%;
   }
-
-  /* Dynamically Created Elements */
-  #PSN-ID {
-    margin-left: 15px;
-  }
 }
 
-@media screen and (min-width: 450px) and (max-width: 500px) {
+@media screen and (max-width: 500px) {
   #brand-Logo {
     width: 20%;
     height: 4rem;
@@ -185,8 +180,7 @@ label {
     left: 32%;
   }
 
-  #searchBar {
-    width: 53%;
+  #PSN-Search {
   }
 }
 
