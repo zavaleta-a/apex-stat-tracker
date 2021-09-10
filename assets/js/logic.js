@@ -53,14 +53,14 @@ $(function () {
     $("#checkPlayerData").on("click", function (event) {
       event.preventDefault();
 
-      var url = "https://apex-legends.p.rapidapi.com/stats/imshleepdawg/PC";
+      var url = "https://apex-legends.p.rapidapi.com/stats/imshleepdawg/PS4";
 
       if (playerNameInput.val() !== "") {
         url = url.slice(54);
         url =
           "https://apex-legends.p.rapidapi.com/stats/" +
           playerNameInput.val() +
-          "/PC";
+          "/PS4";
         fetch(url, {
           method: "GET",
           headers: {
