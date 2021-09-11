@@ -63,6 +63,14 @@ hr {
   background-color: black;
 }
 
+#wraith {
+  height: 780px;
+  width: 290px;
+  position: absolute;
+  right: -270px;
+  top: -120px;
+}
+
 #aboutUsText {
   position: absolute;
   left: 360px;
@@ -79,6 +87,11 @@ hr {
 
 /*About Us CSS Styling */
 /* ------------------- */
+
+/* Contact Us Styling */
+
+/* Contact Us Styling */
+/* ------------------ */
 
 #player-SearchBox {
   border: solid 2px black;
