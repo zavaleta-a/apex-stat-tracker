@@ -73,9 +73,66 @@ $(function () {
     $("#checkPlayerData").on("click", function (event) {
       event.preventDefault();
 
-      var url = "https://apex-legends.p.rapidapi.com/stats/imshleepdawg/PS4";
+      if ($("h6").html() === "Playstation Database") {
+        var url =
+          "https://apex-legends.p.rapidapi.com/stats/" +
+          playerNameInputPSN.val() +
+          "/PS4";
+        // fetch
+        fetch(url, {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
+            "x-rapidapi-key":
+              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+          },
+        }).then(function (resp) {
+          return resp.json().then(function (data) {
+            console.log(data);
+          });
+        });
+        // fetch
+      } else if ($("h6").html() === "Xbox Database") {
+        var url =
+          "https://apex-legends.p.rapidapi.com/stats/" +
+          playerNameInputXbox.val() +
+          "/X1";
+        // fetch
+        fetch(url, {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
+            "x-rapidapi-key":
+              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+          },
+        }).then(function (resp) {
+          return resp.json().then(function (data) {
+            console.log(data);
+          });
+        });
+        // fetch
+      } else {
+        var url =
+          "https://apex-legends.p.rapidapi.com/stats/" +
+          playerNameInputPc.val() +
+          "/PC";
+        // fetch
+        fetch(url, {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
+            "x-rapidapi-key":
+              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+          },
+        }).then(function (resp) {
+          return resp.json().then(function (data) {
+            console.log(data);
+          });
+        });
+        // fetch
+      }
 
-      if (playerNameInputPSN.val() !== "") {
+      /*if (playerNameInputPSN.val() !== "") {
         url = url.slice(54);
         url =
           "https://apex-legends.p.rapidapi.com/stats/" +
@@ -102,7 +159,7 @@ $(function () {
           borderWidth: "2px",
           borderColor: "red",
         });
-      }
+      }*/
       // End Of Else //
     });
   });
