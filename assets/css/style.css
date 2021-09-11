@@ -94,6 +94,9 @@ hr {
   height: 145px;
   margin: 0 auto;
   background: rgb(121, 121, 121, 0.55);
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  border-radius: 10%;
 }
 
 label {
