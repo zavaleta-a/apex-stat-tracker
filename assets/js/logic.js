@@ -78,7 +78,7 @@ $(function () {
     $("#checkPlayerData").on("click", function (event) {
       event.preventDefault();
 
-      // IF PLAYSTATION DATABASE IF SEARCH //
+      // IF PLAYSTATION DATABASE IS SEARCHED //
       if ($("h6").html() === "Playstation Database") {
         var url =
           "https://apex-legends.p.rapidapi.com/stats/" +
@@ -96,18 +96,18 @@ $(function () {
           return resp.json().then(function (data) {
             if (resp.ok) {
               $("#empty-Vid-Container").empty();
-              var statBox = $("<div id='statBox'></div>");
+              var statBox = $("<div id='statBox' class='row'></div>");
               statBox.css({
                 height: "250px",
                 borderStyle: "solid",
                 borderColor: "red",
               });
               $("#empty-Vid-Container").append(statBox);
+              // Current Level Box //
               var levelBox = $(
-                "<div id='level' class='center-align'><span style='text-Decoration: underline'>Current Level</span></div>"
+                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
               );
               levelBox.css({
-                width: "50%",
                 height: "100px",
                 borderStyle: "solid",
                 borderColor: "black",
@@ -117,14 +117,41 @@ $(function () {
               levelBox
                 .append(insertBreak)
                 .append($("<span></span>").html(data.global.level));
-              error.css("display", "none");
+              // Recently Used Legend Box //
+              var LegendBox = $(
+                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
+              );
+              LegendBox.css({
+                height: "100px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(LegendBox);
+              LegendBox.append(insertBreak).append(
+                $("<span></span>").html(data.legends.selected.LegendName)
+              );
+              // Total Kills Box //
+              var totalKillsWithLegend = $(
+                "<div id='kills' class='center-align col s6'><span style='text-Decoration: underline'>Kills</span></div>"
+              );
+              LegendBox.css({
+                height: "100px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(LegendBox);
+              LegendBox.append(insertBreak).append(
+                $("<span></span>").html(data.legends.selected.LegendName)
+              );
             } else {
               error.css("display", "block");
             }
           });
         });
         // fetch
-        // IF PLAYSTATION DATABASE IF SEARCH //
+        // IF PLAYSTATION DATABASE IS SEARCHED //
       } else if ($("h6").html() === "Xbox Database") {
         var url =
           "https://apex-legends.p.rapidapi.com/stats/" +
