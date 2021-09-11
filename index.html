@@ -41,16 +41,8 @@
         </div>
       </nav>
     </header>
-    <main>
-      <!-- Left and Right Banners -->
-      <section class="banner-left">
-        <img
-          src="./Images/mirage-banner.png"
-          class="mir-banner"
-          alt="Image of Apex Legend Revenant"
-        />
-      </section>
-      <!--Video Section-->
+    <!--Video Section-->
+    <div id="video-Container">
       <section class="container video">
         <h3 id="top-Text" class="white-text black center-align">
           <span class="pros-Text">Pros</span> Check Their Stats
@@ -62,26 +54,37 @@
           Are You Ready To Go <span class="pros-Text">Pro</span>?
         </h3>
       </section>
-      <section class="banner-right">
-        <img
-          src="./Images/pathfinder-banner.jpg"
-          class="path-banner"
-          alt="Image of Apex Legend Pathfinder"
-        />
-      </section>
-    </main>
+    </div>
     <!--RAPID API (SEARCH SECTION)--><!--MOBILE RESPONSIVENESS DONE-->
     <section class="search-bar">
       <hr />
-      <div class="container row">
-        <div>
-          <div id="player-SearchBox" class="wrap">
-            <div class="col s12 center-align" id="search">
-              <input type="text" class="search-ter" placeholder="Player Name" />
-              <span class="search-button"></span
-              ><span class="search-icon"></span>
-            </div>
+      <div class="row">
+        <div id="player-SearchBox">
+          <h6 class="center-align">Console Type:</h6>
+          <!--ADD COLUMN CLASS WHEN SCREEN REACHES DESKTOP LAYOUT-->
+          <div class="console-Container">
+            <label>
+              <input id="PSN" name="console" type="radio" />
+              <span>Playstation (PS4 | PS5)</span>
+            </label>
           </div>
+          <div class="console-Container">
+            <label>
+              <input id="XBOX" name="console" type="radio" name="console" />
+              <span id="xbox">Xbox (ONE | SERIES X|S)</span>
+            </label>
+          </div>
+          <div class="console-Container">
+            <label>
+              <input id="PC" name="console" type="radio" />
+              <span id="pc">PC (STEAM | ORIGIN) </span>
+            </label>
+          </div>
+          <div id="continue-Button" class="center-align">
+          <div>
+            <button>continue</button>
+          </div>
+          <!--ADD COLUMN CLASS WHEN SCREEN REACHES DESKTOP LAYOUT-->
         </div>
       </div>
     </section>
