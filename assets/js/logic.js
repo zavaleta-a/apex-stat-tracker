@@ -78,6 +78,7 @@ $(function () {
     $("#checkPlayerData").on("click", function (event) {
       event.preventDefault();
 
+      // IF PLAYSTATION DATABASE IF SEARCH //
       if ($("h6").html() === "Playstation Database") {
         var url =
           "https://apex-legends.p.rapidapi.com/stats/" +
@@ -103,23 +104,27 @@ $(function () {
               });
               $("#empty-Vid-Container").append(statBox);
               var levelBox = $(
-                "<div id='level' class='center-align'>Current Level</div>"
+                "<div id='level' class='center-align'><span style='text-Decoration: underline'>Current Level</span></div>"
               );
               levelBox.css({
                 width: "50%",
                 height: "100px",
                 borderStyle: "solid",
                 borderColor: "black",
+                fontWeight: "bolder",
               });
               statBox.append(levelBox);
+              levelBox
+                .append(insertBreak)
+                .append($("<span></span>").html(data.global.level));
               error.css("display", "none");
-              // Create a sized container that will contain all stat properties for searched player //
             } else {
               error.css("display", "block");
             }
           });
         });
         // fetch
+        // IF PLAYSTATION DATABASE IF SEARCH //
       } else if ($("h6").html() === "Xbox Database") {
         var url =
           "https://apex-legends.p.rapidapi.com/stats/" +
