@@ -95,6 +95,23 @@ $(function () {
           return resp.json().then(function (data) {
             if (resp.ok) {
               $("#empty-Vid-Container").empty();
+              var statBox = $("<div id='statBox'></div>");
+              statBox.css({
+                height: "250px",
+                borderStyle: "solid",
+                borderColor: "red",
+              });
+              $("#empty-Vid-Container").append(statBox);
+              var levelBox = $(
+                "<div id='level' class='center-align'>Current Level</div>"
+              );
+              levelBox.css({
+                width: "50%",
+                height: "100px",
+                borderStyle: "solid",
+                borderColor: "black",
+              });
+              statBox.append(levelBox);
               error.css("display", "none");
               // Create a sized container that will contain all stat properties for searched player //
             } else {
