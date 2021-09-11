@@ -95,6 +95,10 @@ $(function () {
           return resp.json().then(function (data) {
             if (resp.ok) {
               $("#empty-Vid-Container").empty();
+              error.css("display", "none");
+              // Create a sized container that will contain all stat properties for searched player //
+            } else {
+              error.css("display", "block");
             }
           });
         });
