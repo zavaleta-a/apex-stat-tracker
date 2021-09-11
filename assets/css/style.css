@@ -2,8 +2,40 @@ nav {
   background-color: #000;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-Container {
   display: flex;
+}
+
+.banner-left {
+  border: solid black 2px;
+  height: 1000px;
+  width: 300px;
+}
+
+.mir-banner {
+  height: 996px;
+  width: 296px;
+}
+
+.banner-right {
+  border: solid black 2px;
+  height: 1000px;
+  width: 300px;
+}
+
+.path-banner {
+  height: 996px;
+  width: 296px;
+}
+
+.search-bar {
+  position: relative;
+  bottom: 10px;
 }
 
 li {
@@ -61,6 +93,7 @@ hr {
   width: 75%;
   height: 145px;
   margin: 0 auto;
+  background: rgb(121, 121, 121, 0.55);
 }
 
 label {
