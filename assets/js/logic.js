@@ -34,6 +34,11 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
+      var error = $("<p>PSN ID Must Contain A Value!</p>").css({
+        color: "red",
+        display: "none",
+      });
+      playerSearchBox.append(error);
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
@@ -88,7 +93,9 @@ $(function () {
           },
         }).then(function (resp) {
           return resp.json().then(function (data) {
-            console.log(data);
+            if (resp.ok) {
+              $("#empty-Vid-Container").empty();
+            }
           });
         });
         // fetch
