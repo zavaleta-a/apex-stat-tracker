@@ -49,6 +49,8 @@ hr {
   width: 355px;
   border-radius: 100%;
   border: white solid;
+  background-color: #258aff;
+  box-shadow: 5px 1px 600px 9px #258aff;
 }
 #robot {
   height: 100%;
