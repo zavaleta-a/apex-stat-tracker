@@ -43,6 +43,17 @@
     </header>
     <!--RAPID API (SEARCH SECTION)--><!--MOBILE RESPONSIVENESS DONE-->
     <section>
+      <div id="favorites-Container" class="black center-align">
+        <img
+          id="favorites"
+          src="C:\Users\Tino Carrier\Desktop\Images\favorites.png"
+        />
+        <br />
+        <span id="favorites-Text" class="white-text">Favorites</span>
+      </div>
+      <div id="dropDown" class="toggleList">
+        <ul id="dropDown-list"></ul>
+      </div>
       <div id="rapid-API-Search-Section" class="container row">
         <!--Start Of Column-->
         <div class="col s12">
@@ -53,7 +64,7 @@
       <hr />
       <div class="row">
         <div id="player-SearchBox">
-          <h6 class="center-align">Console Type:</h6>
+          <h6 id="psb-ConsoleType" class="center-align">Console Type:</h6>
           <!--ADD COLUMN CLASS WHEN SCREEN REACHES DESKTOP LAYOUT-->
           <div class="console-Container">
             <label>
@@ -63,7 +74,7 @@
           </div>
           <div class="console-Container">
             <label>
-              <input id="XBOX" name="console" type="radio" name="console" />
+              <input id="XBOX" name="console" type="radio" />
               <span id="xbox">Xbox (ONE | SERIES X|S)</span>
             </label>
           </div>
@@ -86,9 +97,11 @@
         <h3 id="top-Text" class="white-text black center-align">
           <span class="pros-Text">Pros</span> Check Their Stats
         </h3>
-        <video autoplay muted loop>
-          <source src="./apex-gameplay-compressed.mp4" />
-        </video>
+        <div id="empty-Vid-Container">
+          <video autoplay muted loop>
+            <source src="./apex-gameplay-compressed.mp4" />
+          </video>
+        </div>
         <h3 id="bottom-Text" class="white-text black center-align">
           Are You Ready To Go <span class="pros-Text">Pro</span>?
         </h3>
