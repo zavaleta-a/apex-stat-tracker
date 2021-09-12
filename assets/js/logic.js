@@ -43,10 +43,7 @@ $(function () {
     event.preventDefault();
 
     if ($("#PSN").is(":checked")) {
-      //playerSearchBox.empty();
-      // TESTING //
       var psbChildren = playerSearchBox.children().detach();
-      // TESTING //
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(playstationSearch);
       playerSearchBox.append(insertBreak);
@@ -57,10 +54,7 @@ $(function () {
       playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#XBOX").is(":checked")) {
-      //playerSearchBox.empty();
-      // TESTING //
       var psbChildren = playerSearchBox.children().detach();
-      // TESTING //
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(xboxSearch);
@@ -71,10 +65,7 @@ $(function () {
       playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#PC").is(":checked")) {
-      //playerSearchBox.empty();
-      // TESTING //
       var psbChildren = playerSearchBox.children().detach();
-      // TESTING //
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(pcSearch);
@@ -194,8 +185,12 @@ $(function () {
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               statBox.append(addToFav);
               addToFav.on("click", function () {
-                var listItem = $("<li></li>").html(playerNameInputPSN.val());
+                var listItem = $("<li></li>");
+                var listItemLinks = $("<a></a>");
+                listItem.append(listItemLinks);
+                listItemLinks.html(playerNameInputPSN.val());
                 $("#dropDown-list").append(listItem);
+                
               });
             } else {
               error.css("visibility", "visible");
