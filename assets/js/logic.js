@@ -306,7 +306,7 @@ $(function () {
                 "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
               );
               levelBox.css({
-                height: "125px",
+                height: "110px",
                 borderStyle: "solid",
                 borderColor: "black",
                 fontWeight: "bolder",
@@ -320,7 +320,7 @@ $(function () {
                 "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
               );
               legendBox.css({
-                height: "125px",
+                height: "110px",
                 borderStyle: "solid",
                 borderColor: "black",
                 fontWeight: "bolder",
@@ -337,7 +337,7 @@ $(function () {
                 "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
               );
               divisionBox.css({
-                height: "150px",
+                height: "110px",
                 borderStyle: "solid",
                 borderColor: "black",
                 fontWeight: "bolder",
@@ -351,13 +351,18 @@ $(function () {
                 "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
               );
               rankBox.css({
-                height: "150px",
+                height: "110px",
                 borderStyle: "solid",
                 borderColor: "black",
                 fontWeight: "bolder",
               });
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
+              // ADD TO FAVORITES BUTTON //
+              var addToFav = $(
+                "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
+              );
+              statBox.append(addToFav);
             } else {
               error
                 .text("Username Must Contain A Value!")
