@@ -290,6 +290,10 @@ $(function () {
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               // ADD TO FAVORITES BUTTON //
               statBox.append(addToFav);
+              addToFav.on("click", function () {
+                var listItem = $("<li></li>").html(playerNameInputXbox.val());
+                $("#dropDown-list").append(listItem);
+              });
             } else {
               error
                 .text("GamerTag Must Contain A Value!")
@@ -385,6 +389,10 @@ $(function () {
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               // ADD TO FAVORITES BUTTON //
               statBox.append(addToFav);
+              addToFav.on("click", function () {
+                var listItem = $("<li></li>").html(playerNameInputPc.val());
+                $("#dropDown-list").append(listItem);
+              });
             } else {
               error
                 .text("Username Must Contain A Value!")
