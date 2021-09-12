@@ -149,7 +149,7 @@ label {
 }
 
 #favorites-Container {
-  margin-bottom: 0px;
+  /*margin-bottom: ; 0px;*/
 }
 
 #dropDown {
@@ -204,6 +204,18 @@ label {
 
   #checkPlayerData {
     margin-left: 60px;
+  }
+
+  #favorites {
+    width: 5%;
+    height: 50px;
+  }
+}
+
+@media screen and (width: 1920px) {
+  #favorites {
+    width: 3%;
+    height: 50px;
   }
 }
 
