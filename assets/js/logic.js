@@ -108,9 +108,7 @@ $(function () {
     });
     // IF BACK BUTTON IS CLICKED //
 
-    playerSearchButton.on("click", function (event) {
-      event.preventDefault();
-
+    playerSearchButton.on("click", function () {
       // IF PLAYSTATION DATABASE IS SEARCHED //
       if ($("h6").html() === "Playstation Database") {
         var url =
@@ -195,6 +193,10 @@ $(function () {
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               statBox.append(addToFav);
+              addToFav.on("click", function () {
+                var listItem = $("<li></li>").html(playerNameInputPSN.val());
+                $("#dropDown-list").append(listItem);
+              });
             } else {
               error.css("visibility", "visible");
             }
@@ -404,12 +406,6 @@ $(function () {
       event.target.matches("#favorites-Text")
     ) {
       $("#dropDown").toggleClass("toggleList");
-    }
-  });
-  addToFav.on("click", function () {
-    if (playerNameInputPSN.val() !== "") {
-      var listItem = $("<li></li>").html(playerNameInputPSN.val());
-      $("#dropDown-list").append(listItem);
     }
   });
 });
