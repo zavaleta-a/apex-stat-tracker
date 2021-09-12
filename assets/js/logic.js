@@ -22,19 +22,26 @@ $(function () {
       visibility: "hidden",
     });
 
+    var playstationSearch = $("<h6></h6>")
+      .html("Playstation Database")
+      .addClass("center-align");
+    var xboxSearch = $("<h6></h6>")
+      .html("Xbox Database")
+      .addClass("center-align");
+    var pcSearch = $("<h6></h6>").html("PC Database").addClass("center-align");
     var playerSearchButton = $("<button id='checkPlayerData'>search</button>");
     var playerSearchBack = $("<button id='consoleSelect'>back</button>");
-
+    var playerNameLabelPSN = $("<label>PSN ID: </label>");
+    var playerNameInputPSN = $("<input type='username' />");
+    var playerNameLabelXbox = $("<label>GamerTag: </label>");
+    var playerNameInputXbox = $("<input type='username' />");
+    var playerNameLabelPc = $("<label>Username: </label>");
+    var playerNameInputPc = $("<input type='username' />");
     if ($("#PSN").is(":checked")) {
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
-      var playstationSearch = $("<h6></h6>")
-        .html("Playstation Database")
-        .addClass("center-align");
       playerSearchBox.append(playstationSearch);
       playerSearchBox.append(insertBreak);
-      var playerNameLabelPSN = $("<label>PSN ID: </label>");
-      var playerNameInputPSN = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelPSN);
       playerSearchBox.append(playerNameInputPSN);
       playerSearchBox.append(insertBreak);
@@ -44,12 +51,7 @@ $(function () {
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
-      var xboxSearch = $("<h6></h6>")
-        .html("Xbox Database")
-        .addClass("center-align");
       playerSearchBox.append(xboxSearch);
-      var playerNameLabelXbox = $("<label>GamerTag: </label>");
-      var playerNameInputXbox = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelXbox);
       playerSearchBox.append(playerNameInputXbox);
       playerSearchBox.append(insertBreak);
@@ -59,12 +61,7 @@ $(function () {
     } else if ($("#PC").is(":checked")) {
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
-      var pcSearch = $("<h6></h6>")
-        .html("PC Database")
-        .addClass("center-align");
       playerSearchBox.append(pcSearch);
-      var playerNameLabelPc = $("<label>Username: </label>");
-      var playerNameInputPc = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelPc);
       playerSearchBox.append(playerNameInputPc);
       playerSearchBox.append(insertBreak);
@@ -74,6 +71,16 @@ $(function () {
     } else {
       // WHAT HAPPENS IF NO CONSOLE TYPE IS SELECTED????? //
     }
+
+    // IF BACK BUTTON IS CLICKED //
+    playerSearchBack.on("click", function (event) {
+      event.preventDefault();
+
+      if ($("h6").html() === "Playstation Database") {
+        psnNavConsoleType();
+      }
+    });
+    // IF BACK BUTTON IS CLICKED //
 
     playerSearchButton.on("click", function (event) {
       event.preventDefault();
