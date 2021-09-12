@@ -16,6 +16,10 @@ $(function () {
 
     var playerSearchBox = $("#player-SearchBox");
     var insertBreak = $("<br />");
+    var error = $("<p>PSN ID Must Contain A Value!</p>").css({
+      color: "red",
+      visibility: "hidden",
+    });
 
     if ($("#PSN").is(":checked")) {
       playerSearchBox.empty();
@@ -34,10 +38,7 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
-      var error = $("<p>PSN ID Must Contain A Value!</p>").css({
-        color: "red",
-        display: "none",
-      });
+      // Variable error declaration was removed from here and made global on line 19...TESTING
       playerSearchBox.append(error);
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
@@ -55,6 +56,7 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
+      playerSearchBox.append(error);
     } else if ($("#PC").is(":checked")) {
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
@@ -71,6 +73,7 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
+      playerSearchBox.append(error);
     } else {
       // WHAT HAPPENS IF NO CONSOLE TYPE IS SELECTED????? //
     }
@@ -95,7 +98,7 @@ $(function () {
         }).then(function (resp) {
           return resp.json().then(function (data) {
             if (resp.ok) {
-              error.css("display", "none");
+              error.css("visibility", "hidden");
               $("#empty-Vid-Container").empty();
               var statBox = $("<div id='statBox' class='row'></div>");
               statBox.css({
@@ -162,7 +165,7 @@ $(function () {
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
             } else {
-              error.css("display", "block");
+              error.css("visibility", "visible");
             }
           });
         });
@@ -186,7 +189,7 @@ $(function () {
         }).then(function (resp) {
           return resp.json().then(function (data) {
             if (resp.ok) {
-              error.css("display", "none");
+              error.css("visibility", "hidden");
               $("#empty-Vid-Container").empty();
               var statBox = $("<div id='statBox' class='row'></div>");
               statBox.css({
@@ -253,12 +256,16 @@ $(function () {
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
             } else {
-              error.css("display", "block");
+              error
+                .text("GamerTag Must Contain A Value!")
+                .css("visibility", "visible");
             }
           });
         });
         // fetch
         // IF XBOX DATABASE IS SEARCHED //
+
+        // IF PC DATABASE IS SEARCHED //
       } else {
         var url =
           "https://apex-legends.p.rapidapi.com/stats/" +
@@ -274,41 +281,82 @@ $(function () {
           },
         }).then(function (resp) {
           return resp.json().then(function (data) {
-            console.log(data);
-          });
-        });
-        // fetch
-      }
+            if (resp.ok) {
+              error.css("visibility", "hidden");
+              $("#empty-Vid-Container").empty();
+              var statBox = $("<div id='statBox' class='row'></div>");
+              statBox.css({
+                height: "250px",
+                borderStyle: "solid",
+                borderColor: "red",
+              });
+              $("#empty-Vid-Container").append(statBox);
+              // Current Level Box //
+              var levelBox = $(
+                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
+              );
+              levelBox.css({
+                height: "125px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(levelBox);
+              levelBox
+                .append(insertBreak)
+                .append($("<span></span>").html(data.global.level));
+              // Recently Used Legend Box //
+              var legendBox = $(
+                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
+              );
+              legendBox.css({
+                height: "125px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(legendBox);
+              legendBox
+                .append(insertBreak)
+                .append(
+                  $("<span></span>").html(data.legends.selected.LegendName)
+                );
+              // Division Box //
 
-      /*if (playerNameInputPSN.val() !== "") {
-        url = url.slice(54);
-        url =
-          "https://apex-legends.p.rapidapi.com/stats/" +
-          playerNameInputPSN.val() +
-          "/PS4";
-        fetch(url, {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
-            "x-rapidapi-key":
-              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
-          },
-        })
-          .then(function (resp) {
-            return resp.json();
-          })
-          .then(function (data) {
-            console.log(data);
+              var divisionBox = $(
+                "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
+              );
+              divisionBox.css({
+                height: "150px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(divisionBox);
+              divisionBox.append(
+                $("<span></span>").html(data.global.rank.rankName)
+              );
+              // Rank Box //
+              var rankBox = $(
+                "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
+              );
+              rankBox.css({
+                height: "150px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(rankBox);
+              rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
+            } else {
+              error
+                .text("Username Must Contain A Value!")
+                .css("visibility", "visible");
+            }
+            // IF PC DATABASE IS SEARCHED //
           });
-        // END OF FETCH //
-      } else {
-        playerNameInputPSN.css({
-          borderStyle: "solid",
-          borderWidth: "2px",
-          borderColor: "red",
         });
-      }*/
-      // End Of Else //
+      }
     });
   });
 });
