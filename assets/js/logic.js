@@ -53,6 +53,10 @@ $(function () {
       playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#XBOX").is(":checked")) {
+      //playerSearchBox.empty();
+      // TESTING //
+      var psbChildren = playerSearchBox.children().detach();
+      // TESTING //
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(xboxSearch);
@@ -63,6 +67,10 @@ $(function () {
       playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#PC").is(":checked")) {
+      //playerSearchBox.empty();
+      // TESTING //
+      var psbChildren = playerSearchBox.children().detach();
+      // TESTING //
       playerSearchBox.empty();
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(pcSearch);
@@ -81,6 +89,14 @@ $(function () {
       event.preventDefault();
 
       if ($("h6").html() === "Playstation Database") {
+        playerSearchBox.empty();
+        playerSearchBox.removeClass("center-align");
+        playerSearchBox.append(psbChildren);
+      } else if ($("h6").html() === "Xbox Database") {
+        playerSearchBox.empty();
+        playerSearchBox.removeClass("center-align");
+        playerSearchBox.append(psbChildren);
+      } else {
         playerSearchBox.empty();
         playerSearchBox.removeClass("center-align");
         playerSearchBox.append(psbChildren);
