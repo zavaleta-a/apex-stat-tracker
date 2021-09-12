@@ -277,4 +277,9 @@ label {
   video {
     width: 100%;
   }
+
+  #favorites {
+    width: 10%;
+    height: 40px;
+  }
 }
