@@ -14,12 +14,15 @@ $(function () {
   $("#continue-Button").on("click", function (event) {
     event.preventDefault();
 
+    // Handle on dynamically created HTML elements //
     var playerSearchBox = $("#player-SearchBox");
     var insertBreak = $("<br />");
     var error = $("<p>PSN ID Must Contain A Value!</p>").css({
       color: "red",
       visibility: "hidden",
     });
+
+    var playerSearchBack = $("<button id='consoleSelect'>back</button>");
 
     if ($("#PSN").is(":checked")) {
       playerSearchBox.empty();
@@ -38,7 +41,7 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
-      // Variable error declaration was removed from here and made global on line 19...TESTING
+      playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#XBOX").is(":checked")) {
       playerSearchBox.empty();
@@ -54,9 +57,6 @@ $(function () {
       var playerSearchButton = $(
         "<button id='checkPlayerData'>search</button>"
       );
-      // Adding Back Button // TESTING //
-      var playerSearchBack = $("<button id='consoleSelect'>back</button>");
-      // Adding Back Button // TESTING //
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
       playerSearchBox.append(playerSearchBack);
@@ -77,6 +77,7 @@ $(function () {
       );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
+      playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else {
       // WHAT HAPPENS IF NO CONSOLE TYPE IS SELECTED????? //
