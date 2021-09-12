@@ -39,9 +39,9 @@ $(function () {
     var playerNameInputPc = $("<input type='username' />");
     // Handle on dynamically created HTML elements //
     if ($("#PSN").is(":checked")) {
-      playerSearchBox.empty();
+      //playerSearchBox.empty();
       // TESTING //
-
+      var psbChildren = playerSearchBox.children().detach();
       // TESTING //
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(playstationSearch);
@@ -81,7 +81,9 @@ $(function () {
       event.preventDefault();
 
       if ($("h6").html() === "Playstation Database") {
-        console.log("back");
+        playerSearchBox.empty();
+        playerSearchBox.removeClass("center-align");
+        playerSearchBox.append(psbChildren);
       }
     });
     // IF BACK BUTTON IS CLICKED //
