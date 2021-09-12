@@ -102,6 +102,27 @@ hr {
 .ul-contactUs {
   font-weight: bold;
 }
+
+.contactEmail {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.repoAddress {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.logo-background {
+  position: absolute;
+  left: 350px;
+}
 /* Contact Us Styling */
 /* ------------------ */
 
