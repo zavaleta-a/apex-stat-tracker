@@ -408,7 +408,9 @@ $(function () {
       $("#dropDown").toggleClass("toggleList");
     }
   });
-});
 
-// Creating share button
-playerSearchButton.on("click", function () {});
+// Displaying Share Button
+  playerSearchButton.on("click", function () {
+    $("#share-cont").css("display", "block")
+   });
+});
