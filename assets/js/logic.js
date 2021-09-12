@@ -409,3 +409,6 @@ $(function () {
     }
   });
 });
+
+// Creating share button
+playerSearchButton.on("click", function () {});
