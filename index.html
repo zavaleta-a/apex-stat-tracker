@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--ADD A TITLE NAME-->
-    <title>Document</title>
+    <title>Apex Stat Tracker</title>
     <!--LINK GOOGLE FONT API-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -31,32 +31,29 @@
       <nav class="col s12">
         <ul class="right">
           <li><a href="#">Search</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="./AboutUs.html">About Us</a></li>
           <li><a href="#">Contact Us</a></li>
         </ul>
         <div class="flex-Container">
           Apex
-          <img id="brand-Logo" src="./apex.png" />
+          <img id="brand-Logo" src="./Images/apex.png" />
           Legends
         </div>
       </nav>
     </header>
-    <!--Video Section-->
-    <div id="video-Container">
-      <section class="container video">
-        <h3 id="top-Text" class="white-text black center-align">
-          <span class="pros-Text">Pros</span> Check Their Stats
-        </h3>
-        <video autoplay muted loop>
-          <source src="./apex-gameplay-compressed.mp4" />
-        </video>
-        <h3 id="bottom-Text" class="white-text black center-align">
-          Are You Ready To Go <span class="pros-Text">Pro</span>?
-        </h3>
-      </section>
-    </div>
     <!--RAPID API (SEARCH SECTION)--><!--MOBILE RESPONSIVENESS DONE-->
     <section>
+      <div id="favorites-Container" class="black center-align">
+        <img
+          id="favorites"
+          src="C:\Users\Tino Carrier\Desktop\Images\favorites.png"
+        />
+        <br />
+        <span id="favorites-Text" class="white-text">Favorites</span>
+      </div>
+      <div id="dropDown" class="toggleList">
+        <ul id="dropDown-list"></ul>
+      </div>
       <div id="rapid-API-Search-Section" class="container row">
         <!--Start Of Column-->
         <div class="col s12">
@@ -66,34 +63,50 @@
       </div>
       <hr />
       <div class="row">
-        <form id="player-SearchBox">
-          <h6 class="center-align">Console Type:</h6>
+        <div id="player-SearchBox">
+          <h6 id="psb-ConsoleType" class="center-align">Console Type:</h6>
           <!--ADD COLUMN CLASS WHEN SCREEN REACHES DESKTOP LAYOUT-->
-          <div class="center-align console-Container">
+          <div class="console-Container">
             <label>
-              <input name="console" type="radio" />
-              <span>Playstation</span>
+              <input id="PSN" name="console" type="radio" />
+              <span>Playstation (PS4 | PS5)</span>
             </label>
           </div>
-          <div class="center-align console-Container">
+          <div class="console-Container">
             <label>
-              <input name="console" type="radio" name="console" />
-              <span id="xbox">Xbox</span>
+              <input id="XBOX" name="console" type="radio" />
+              <span id="xbox">Xbox (ONE | SERIES X|S)</span>
             </label>
           </div>
-          <div class="center-align console-Container">
+          <div class="console-Container">
             <label>
-              <input name="console" type="radio" />
-              <span id="pc">PC</span>
+              <input id="PC" name="console" type="radio" />
+              <span id="pc">PC (STEAM | ORIGIN) </span>
             </label>
           </div>
-          <div class="center-align">
+          <div id="continue-Button" class="center-align">
             <button>continue</button>
           </div>
           <!--ADD COLUMN CLASS WHEN SCREEN REACHES DESKTOP LAYOUT-->
-        </form>
+        </div>
       </div>
     </section>
+    <!--Video Section-->
+    <div id="video-Container">
+      <section class="container video">
+        <h3 id="top-Text" class="white-text black center-align">
+          <span class="pros-Text">Pros</span> Check Their Stats
+        </h3>
+        <div id="empty-Vid-Container">
+          <video autoplay muted loop>
+            <source src="./apex-gameplay-compressed.mp4" />
+          </video>
+        </div>
+        <h3 id="bottom-Text" class="white-text black center-align">
+          Are You Ready To Go <span class="pros-Text">Pro</span>?
+        </h3>
+      </section>
+    </div>
 
     <!--LINKING JQUERY FILE-->
     <script
