@@ -1,4 +1,32 @@
 $(function () {
+  // Handle on dynamically created HTML elements //
+  var playerSearchBox = $("#player-SearchBox");
+  var insertBreak = $("<br />");
+  var error = $("<p>PSN ID Must Contain A Value!</p>").css({
+    color: "red",
+    visibility: "hidden",
+  });
+
+  var playstationSearch = $("<h6></h6>")
+    .html("Playstation Database")
+    .addClass("center-align");
+  var xboxSearch = $("<h6></h6>")
+    .html("Xbox Database")
+    .addClass("center-align");
+  var pcSearch = $("<h6></h6>").html("PC Database").addClass("center-align");
+  var playerSearchButton = $("<button id='checkPlayerData'>search</button>");
+  var playerSearchBack = $("<button id='consoleSelect'>back</button>");
+  var playerNameLabelPSN = $("<label>PSN ID: </label>");
+  var playerNameInputPSN = $("<input type='username' />");
+  var playerNameLabelXbox = $("<label>GamerTag: </label>");
+  var playerNameInputXbox = $("<input type='username' />");
+  var playerNameLabelPc = $("<label>Username: </label>");
+  var playerNameInputPc = $("<input type='username' />");
+  var addToFav = $(
+    "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
+  );
+  // Handle on dynamically created HTML elements //
+
   // If screen reaches large desktop or higher, add a class to center logo and adjust width //
   var mq = matchMedia("(min-width: 992px)");
   if (mq.matches) {
@@ -14,30 +42,6 @@ $(function () {
   $("#continue-Button").on("click", function (event) {
     event.preventDefault();
 
-    // Handle on dynamically created HTML elements //
-    var playerSearchBox = $("#player-SearchBox");
-    var insertBreak = $("<br />");
-    var error = $("<p>PSN ID Must Contain A Value!</p>").css({
-      color: "red",
-      visibility: "hidden",
-    });
-
-    var playstationSearch = $("<h6></h6>")
-      .html("Playstation Database")
-      .addClass("center-align");
-    var xboxSearch = $("<h6></h6>")
-      .html("Xbox Database")
-      .addClass("center-align");
-    var pcSearch = $("<h6></h6>").html("PC Database").addClass("center-align");
-    var playerSearchButton = $("<button id='checkPlayerData'>search</button>");
-    var playerSearchBack = $("<button id='consoleSelect'>back</button>");
-    var playerNameLabelPSN = $("<label>PSN ID: </label>");
-    var playerNameInputPSN = $("<input type='username' />");
-    var playerNameLabelXbox = $("<label>GamerTag: </label>");
-    var playerNameInputXbox = $("<input type='username' />");
-    var playerNameLabelPc = $("<label>Username: </label>");
-    var playerNameInputPc = $("<input type='username' />");
-    // Handle on dynamically created HTML elements //
     if ($("#PSN").is(":checked")) {
       //playerSearchBox.empty();
       // TESTING //
@@ -190,10 +194,6 @@ $(function () {
               });
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
-              // ADD TO FAVORITES BUTTON //
-              var addToFav = $(
-                "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
-              );
               statBox.append(addToFav);
             } else {
               error.css("visibility", "visible");
@@ -287,9 +287,6 @@ $(function () {
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               // ADD TO FAVORITES BUTTON //
-              var addToFav = $(
-                "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
-              );
               statBox.append(addToFav);
             } else {
               error
@@ -385,9 +382,6 @@ $(function () {
               statBox.append(rankBox);
               rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
               // ADD TO FAVORITES BUTTON //
-              var addToFav = $(
-                "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
-              );
               statBox.append(addToFav);
             } else {
               error
@@ -410,6 +404,12 @@ $(function () {
       event.target.matches("#favorites-Text")
     ) {
       $("#dropDown").toggleClass("toggleList");
+    }
+  });
+  addToFav.on("click", function () {
+    if (playerNameInputPSN.val() !== "") {
+      var listItem = $("<li></li>").html(playerNameInputPSN.val());
+      $("#dropDown-list").append(listItem);
     }
   });
 });
