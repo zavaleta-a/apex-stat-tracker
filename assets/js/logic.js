@@ -185,7 +185,76 @@ $(function () {
           },
         }).then(function (resp) {
           return resp.json().then(function (data) {
-            console.log(data);
+            if (resp.ok) {
+              error.css("display", "none");
+              $("#empty-Vid-Container").empty();
+              var statBox = $("<div id='statBox' class='row'></div>");
+              statBox.css({
+                height: "250px",
+                borderStyle: "solid",
+                borderColor: "red",
+              });
+              $("#empty-Vid-Container").append(statBox);
+              // Current Level Box //
+              var levelBox = $(
+                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
+              );
+              levelBox.css({
+                height: "125px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(levelBox);
+              levelBox
+                .append(insertBreak)
+                .append($("<span></span>").html(data.global.level));
+              // Recently Used Legend Box //
+              var legendBox = $(
+                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
+              );
+              legendBox.css({
+                height: "125px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(legendBox);
+              legendBox
+                .append(insertBreak)
+                .append(
+                  $("<span></span>").html(data.legends.selected.LegendName)
+                );
+              // Division Box //
+
+              var divisionBox = $(
+                "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
+              );
+              divisionBox.css({
+                height: "150px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(divisionBox);
+              divisionBox.append(
+                $("<span></span>").html(data.global.rank.rankName)
+              );
+              // Rank Box //
+              var rankBox = $(
+                "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
+              );
+              rankBox.css({
+                height: "150px",
+                borderStyle: "solid",
+                borderColor: "black",
+                fontWeight: "bolder",
+              });
+              statBox.append(rankBox);
+              rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
+            } else {
+              error.css("display", "block");
+            }
           });
         });
         // fetch
