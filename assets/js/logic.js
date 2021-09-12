@@ -404,19 +404,11 @@ $(function () {
     // End Of PlayerSearchButton //
   });
   // End Of Continue Button //
-  $("#favorites-Container").on("click", function (event) {
+  /*$("#favorites-Container").on("click", function (event) {
     if (
       event.target.matches("#favorites") ||
       event.target.matches("#favorites-Text")
     ) {
-      var dropdown = $("<div></div>").css({
-        width: "60%",
-        height: "100px",
-        margin: "0 auto",
-        borderStyle: "solid",
-        borderColor: "black",
-      });
-      dropdown.insertAfter("#favorites-Container");
     }
-  });
+  });*/
 });
