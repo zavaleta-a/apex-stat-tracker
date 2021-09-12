@@ -1,4 +1,5 @@
 $(function () {
+  $("#dropDown-list").append(localStorage.getItem("fav"));
   // Handle on dynamically created HTML elements //
   var playerSearchBox = $("#player-SearchBox");
   var insertBreak = $("<br />");
@@ -190,7 +191,7 @@ $(function () {
                 listItem.append(listItemLinks);
                 listItemLinks.html(playerNameInputPSN.val());
                 $("#dropDown-list").append(listItem);
-                
+                localStorage.setItem("fav", listItemLinks.html());
               });
             } else {
               error.css("visibility", "visible");
