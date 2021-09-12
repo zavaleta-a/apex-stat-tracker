@@ -37,8 +37,12 @@ $(function () {
     var playerNameInputXbox = $("<input type='username' />");
     var playerNameLabelPc = $("<label>Username: </label>");
     var playerNameInputPc = $("<input type='username' />");
+    // Handle on dynamically created HTML elements //
     if ($("#PSN").is(":checked")) {
       playerSearchBox.empty();
+      // TESTING //
+
+      // TESTING //
       playerSearchBox.addClass("center-align");
       playerSearchBox.append(playstationSearch);
       playerSearchBox.append(insertBreak);
@@ -77,7 +81,7 @@ $(function () {
       event.preventDefault();
 
       if ($("h6").html() === "Playstation Database") {
-        psnNavConsoleType();
+        console.log("back");
       }
     });
     // IF BACK BUTTON IS CLICKED //
