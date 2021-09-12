@@ -54,8 +54,12 @@ $(function () {
       var playerSearchButton = $(
         "<button id='checkPlayerData'>search</button>"
       );
+      // Adding Back Button // TESTING //
+      var playerSearchBack = $("<button id='consoleSelect'>back</button>");
+      // Adding Back Button // TESTING //
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
+      playerSearchBox.append(playerSearchBack);
       playerSearchBox.append(error);
     } else if ($("#PC").is(":checked")) {
       playerSearchBox.empty();

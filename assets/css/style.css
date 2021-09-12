@@ -229,6 +229,10 @@ label {
     position: relative;
     left: 32%;
   }
+
+  #checkPlayerData {
+    margin-left: 60px;
+  }
 }
 
 @media screen and (max-width: 500px) {
