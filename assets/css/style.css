@@ -70,23 +70,60 @@ hr {
 
 /*About Us CSS Styling */
 .container-aboutUs {
+  font-weight: bolder;
+  font-size: 25px;
   text-align: center;
   padding: 10xp;
 }
 
-#aboutUsText {
-  box-sizing: content-box;
-  width: 50%;
-  height: 50%;
-  border: solid #ff0000;
-  text-align: center;
-  margin: auto;
-  position: relative;
-  top: 175px;
-  left: 50px;
+.container-robot {
+  height: 800px;
+  width: 355px;
+  border-radius: 100%;
+  border: white solid;
+  background-color: #258aff;
+  box-shadow: 5px 1px 600px 9px #258aff;
 }
+#robot {
+  height: 100%;
+  width: 350px;
+  border-radius: 50%;
+  border: inset black;
+  text-align: center;
+
+  display: inline-block;
+  background-color: black;
+}
+
+#wraith {
+  height: 780px;
+  width: 290px;
+  position: absolute;
+  right: -270px;
+  top: -120px;
+}
+
+#aboutUsText {
+  position: absolute;
+  left: 360px;
+  top: 250px;
+  width: 50%;
+  height: auto;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.aboutUs-body {
+  background-color: #be1622;
+}
+
 /*About Us CSS Styling */
 /* ------------------- */
+
+/* Contact Us Styling */
+
+/* Contact Us Styling */
+/* ------------------ */
 
 #player-SearchBox {
   border: solid 2px black;
@@ -112,6 +149,21 @@ label {
 
 #video-Container {
   background-color: rgb(194, 194, 194);
+}
+
+#favorites-Container {
+  margin-bottom: 0px;
+}
+
+#dropDown {
+  width: 60%;
+  height: 150px;
+  margin: 0 auto;
+  border: solid 2px black;
+}
+
+.toggleList {
+  display: none;
 }
 
 /* Desktop Layout */
@@ -152,6 +204,10 @@ label {
   #continue-Button {
     margin-top: 80px;
   }
+
+  #checkPlayerData {
+    margin-left: 60px;
+  }
 }
 
 /* Tablet Layout */
@@ -174,6 +230,19 @@ label {
     position: relative;
     left: 30%;
   }
+
+  #checkPlayerData {
+    margin-left: 60px;
+  }
+
+  #favorites {
+    width: 6%;
+    height: 50px;
+  }
+
+  #favorites-Text {
+    font-size: 1.5rem;
+  }
 }
 
 /* Mobile Layout */
@@ -195,6 +264,15 @@ label {
     position: relative;
     left: 32%;
   }
+
+  #favorites {
+    width: 10%;
+    height: 60px;
+  }
+
+  #favorites-Text {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -215,6 +293,15 @@ label {
     position: relative;
     left: 32%;
   }
+
+  #favorites {
+    width: 10%;
+    height: 50px;
+  }
+
+  #favorites-Text {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -234,5 +321,14 @@ label {
 
   video {
     width: 100%;
+  }
+
+  #favorites {
+    width: 10%;
+    height: 40px;
+  }
+
+  #favorites-Text {
+    font-size: 1rem;
   }
 }
