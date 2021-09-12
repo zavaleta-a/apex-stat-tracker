@@ -131,42 +131,12 @@ hr {
   font-size: 25px;
 }
 
-.ul-contactUs {
-  font-weight: bold;
-}
-
 .curow {
-  position: absolute;
-  bottom: 300px;
-  display: block;
-  left: 525px;
-  text-align: center;
-  font-size: 1.5rem;
-  text-align: center;
+
 }
 
 .cucolumn {
-  display: grid;
-  grid-template-columns: "left center right";
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 40px;
-  grid-gap: 2px;
-  width: 360px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: ;
-  position: relative;
-  bottom: 100px;
-  padding: 10px;
-  color: aliceblue;
 }
-
-.curow:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .contactEmail {
   position: absolute;
   bottom: 30px;
@@ -184,8 +154,8 @@ hr {
 }
 
 .logo-background {
-  position: relative;
-  left: 350px;
+  position: absolute;
+  left: 725px;
 }
 /* Contact Us Styling */
 /* ------------------ */
