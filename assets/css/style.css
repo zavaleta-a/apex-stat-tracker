@@ -186,6 +186,10 @@ label {
   #continue-Button {
     margin-top: 80px;
   }
+
+  #checkPlayerData {
+    margin-left: 60px;
+  }
 }
 
 /* Tablet Layout */
@@ -208,6 +212,10 @@ label {
     position: relative;
     left: 30%;
   }
+
+  #checkPlayerData {
+    margin-left: 60px;
+  }
 }
 
 /* Mobile Layout */
@@ -228,10 +236,6 @@ label {
   .console-Container {
     position: relative;
     left: 32%;
-  }
-
-  #checkPlayerData {
-    margin-left: 60px;
   }
 }
 
