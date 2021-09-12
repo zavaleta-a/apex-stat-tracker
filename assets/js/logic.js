@@ -22,6 +22,7 @@ $(function () {
       visibility: "hidden",
     });
 
+    var playerSearchButton = $("<button id='checkPlayerData'>search</button>");
     var playerSearchBack = $("<button id='consoleSelect'>back</button>");
 
     if ($("#PSN").is(":checked")) {
@@ -36,9 +37,6 @@ $(function () {
       var playerNameInputPSN = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelPSN);
       playerSearchBox.append(playerNameInputPSN);
-      var playerSearchButton = $(
-        "<button id='checkPlayerData'>search</button>"
-      );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
       playerSearchBox.append(playerSearchBack);
@@ -54,9 +52,6 @@ $(function () {
       var playerNameInputXbox = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelXbox);
       playerSearchBox.append(playerNameInputXbox);
-      var playerSearchButton = $(
-        "<button id='checkPlayerData'>search</button>"
-      );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
       playerSearchBox.append(playerSearchBack);
@@ -72,9 +67,6 @@ $(function () {
       var playerNameInputPc = $("<input type='username' />");
       playerSearchBox.append(playerNameLabelPc);
       playerSearchBox.append(playerNameInputPc);
-      var playerSearchButton = $(
-        "<button id='checkPlayerData'>search</button>"
-      );
       playerSearchBox.append(insertBreak);
       playerSearchBox.append(playerSearchButton);
       playerSearchBox.append(playerSearchBack);
@@ -83,7 +75,7 @@ $(function () {
       // WHAT HAPPENS IF NO CONSOLE TYPE IS SELECTED????? //
     }
 
-    $("#checkPlayerData").on("click", function (event) {
+    playerSearchButton.on("click", function (event) {
       event.preventDefault();
 
       // IF PLAYSTATION DATABASE IS SEARCHED //
