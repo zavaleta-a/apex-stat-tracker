@@ -404,11 +404,12 @@ $(function () {
     // End Of PlayerSearchButton //
   });
   // End Of Continue Button //
-  /*$("#favorites-Container").on("click", function (event) {
+  $("#favorites-Container").on("click", function (event) {
     if (
       event.target.matches("#favorites") ||
       event.target.matches("#favorites-Text")
     ) {
+      $("#dropDown").toggleClass("toggleList");
     }
-  });*/
+  });
 });

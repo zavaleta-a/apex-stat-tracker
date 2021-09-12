@@ -152,6 +152,17 @@ label {
   margin-bottom: 0px;
 }
 
+#dropDown {
+  width: 60%;
+  height: 150px;
+  margin: 0 auto;
+  border: solid 2px black;
+}
+
+.toggleList {
+  display: none;
+}
+
 /* Desktop Layout */
 
 @media screen and (min-width: 1201px) {
