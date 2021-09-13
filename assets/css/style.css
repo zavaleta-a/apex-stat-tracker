@@ -134,6 +134,27 @@ hr {
   box-shadow: -3px 3px 10px rgb(121, 121, 121);
 }
 
+#share-cont {
+  display: none;
+  border-radius: 25px;
+  position: relative;
+  bottom: 30px;
+  width: 100px;
+  left: 585px;
+}
+
+.share-button {
+  border-radius: 5px;
+  border: none;
+  background: rgb(68, 122, 221);
+  box-shadow: -3px 3px 10px rgb(0, 0, 0);
+  color: white;
+}
+
+.share-text {
+  color: white;
+}
+
 label {
   font-weight: bolder;
   color: black;

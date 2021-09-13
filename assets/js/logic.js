@@ -408,7 +408,8 @@ $(function () {
       $("#dropDown").toggleClass("toggleList");
     }
   });
-});
 
-// Creating share button
-playerSearchButton.on("click", function () {});
+  playerSearchButton.on("click", function () {
+    $("#share-cont").css("display", "block");
+  });
+});
