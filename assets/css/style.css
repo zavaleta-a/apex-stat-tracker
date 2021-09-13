@@ -127,11 +127,11 @@ hr {
 /* ------------------ */
 
 #player-SearchBox {
-  border: solid 2px black;
+  border: solid 1px black;
   width: 75%;
   height: 145px;
   margin: 0 auto;
-  background: rgb(121, 121, 121, 0.55);
+  background-color: grey;
 }
 
 label {
@@ -154,6 +154,8 @@ label {
   height: 150px;
   margin: 0 auto;
   border: solid 2px black;
+  border-top-width: none;
+  transition: height 2s;
 }
 
 .toggleList {

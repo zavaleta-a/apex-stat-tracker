@@ -1,5 +1,4 @@
 $(function () {
-  $("#dropDown-list").append(localStorage.getItem("fav"));
   // Handle on dynamically created HTML elements //
   var playerSearchBox = $("#player-SearchBox");
   var insertBreak = $("<br />");
@@ -287,8 +286,12 @@ $(function () {
               // ADD TO FAVORITES BUTTON //
               statBox.append(addToFav);
               addToFav.on("click", function () {
-                var listItem = $("<li></li>").html(playerNameInputXbox.val());
+                var listItem = $("<li></li>");
+                var listItemLinks = $("<a></a>");
+                listItem.append(listItemLinks);
+                listItemLinks.html(playerNameInputXbox.val());
                 $("#dropDown-list").append(listItem);
+                localStorage.setItem("fav", listItem.html());
               });
             } else {
               error
@@ -386,8 +389,12 @@ $(function () {
               // ADD TO FAVORITES BUTTON //
               statBox.append(addToFav);
               addToFav.on("click", function () {
-                var listItem = $("<li></li>").html(playerNameInputPc.val());
+                var listItem = $("<li></li>");
+                var listItemLinks = $("<a></a>");
+                listItem.append(listItemLinks);
+                listItemLinks.html(playerNameInputPc.val());
                 $("#dropDown-list").append(listItem);
+                localStorage.setItem("fav", listItem.html());
               });
             } else {
               error
