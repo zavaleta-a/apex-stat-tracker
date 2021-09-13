@@ -191,7 +191,7 @@ $(function () {
                 listItem.append(listItemLinks);
                 listItemLinks.html(playerNameInputPSN.val());
                 $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItemLinks.html());
+                localStorage.setItem("fav", listItem.html());
               });
             } else {
               error.css("visibility", "visible");

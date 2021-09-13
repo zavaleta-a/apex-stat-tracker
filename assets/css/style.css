@@ -9,6 +9,7 @@ main {
 
 .flex-Container {
   display: flex;
+  margin-left: 20px;
 }
 
 .banner-left {
