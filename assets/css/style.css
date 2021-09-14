@@ -135,18 +135,19 @@ hr {
 
 .curow {
   position: absolute;
-  bottom: 350px;
+  bottom: 230px;
   left: 600px;
+  font-weight: 1000;
+  font-size: 1.3rem;
 }
 
 .names {
-  position: absolute;
-  bottom: 210px;
-  left: 600px;
+  position: fixed;
+  bottom: 100px;
+  left: 615px;
+  font-weight: bolder;
 }
 
-.cont-names {
-}
 .contactEmail {
   position: absolute;
   bottom: 30px;
@@ -172,7 +173,7 @@ hr {
   height: 900px;
   width: auto;
   position: fixed;
-  left: 425px;
+  left: 445px;
   z-index: -1;
 }
 /* Contact Us Styling */
