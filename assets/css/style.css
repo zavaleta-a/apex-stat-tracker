@@ -218,6 +218,7 @@ label {
     width: 100%;
   }
 }
+/* Pushing changes up to main to resolve desktop styling for favorites pictures not showing */
 
 @media screen and (min-width: 993px) {
   #continue-Button {
