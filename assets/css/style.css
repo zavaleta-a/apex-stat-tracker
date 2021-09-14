@@ -132,10 +132,18 @@ hr {
 }
 
 .curow {
-
+  position: absolute;
+  bottom: 350px;
+  left: 600px;
 }
 
-.cucolumn {
+.names {
+  position: absolute;
+  bottom: 210px;
+  left: 600px;
+}
+
+.cont-names {
 }
 .contactEmail {
   position: absolute;
@@ -155,7 +163,7 @@ hr {
 
 .logo-background {
   position: absolute;
-  left: 725px;
+  left: 425px;
 }
 /* Contact Us Styling */
 /* ------------------ */
