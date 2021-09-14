@@ -9,6 +9,7 @@ main {
 
 .flex-Container {
   display: flex;
+  margin-left: 20px;
 }
 
 .banner-left {
@@ -42,7 +43,7 @@ li {
   margin: 0px 5px;
 }
 
-li:hover {
+header nav ul li:hover {
   background-color: #ff0000;
 }
 
@@ -126,10 +127,11 @@ hr {
 /* ------------------ */
 
 #player-SearchBox {
-  border: solid 2px black;
+  border: solid 1px black;
   width: 75%;
   height: 145px;
   margin: 0 auto;
+  background-color: grey;
   background: rgb(121, 121, 121, 0.55);
   box-shadow: -3px 3px 10px rgb(121, 121, 121);
 }
@@ -170,15 +172,13 @@ label {
   background-color: rgb(194, 194, 194);
 }
 
-#favorites-Container {
-  margin-bottom: 0px;
-}
-
 #dropDown {
   width: 60%;
   height: 150px;
   margin: 0 auto;
   border: solid 2px black;
+  border-top-width: none;
+  transition: height 2s;
 }
 
 .toggleList {
@@ -218,6 +218,7 @@ label {
     width: 100%;
   }
 }
+/* Pushing changes up to main to resolve desktop styling for favorites pictures not showing */
 
 @media screen and (min-width: 993px) {
   #continue-Button {
@@ -226,6 +227,18 @@ label {
 
   #checkPlayerData {
     margin-left: 60px;
+  }
+
+  #favorites {
+    width: 5%;
+    height: 50px;
+  }
+}
+
+@media screen and (width: 1920px) {
+  #favorites {
+    width: 3%;
+    height: 50px;
   }
 }
 
