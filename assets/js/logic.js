@@ -25,7 +25,15 @@ $(function () {
   var addToFav = $(
     "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
   );
+  var dropDown = $("#dropDown");
+  var dropDownList = $("#dropDown-list");
   // Handle on dynamically created HTML elements //
+
+  if (localStorage.getItem("fav")) {
+    dropDown.append(localStorage.getItem("fav"));
+  } else {
+    console.log("N");
+  }
 
   // If screen reaches large desktop or higher, add a class to center logo and adjust width //
   var mq = matchMedia("(min-width: 992px)");
@@ -100,6 +108,10 @@ $(function () {
     // IF BACK BUTTON IS CLICKED //
 
     playerSearchButton.on("click", function () {
+      // Facebook Share Button Dynamic Styling //
+      $("#share-cont").css("display", "block");
+      // Facebook Share Button Dynamic Styling //
+
       // IF PLAYSTATION DATABASE IS SEARCHED //
       if ($("h6").html() === "Playstation Database") {
         var url =
@@ -189,8 +201,8 @@ $(function () {
                 var listItemLinks = $("<a></a>");
                 listItem.append(listItemLinks);
                 listItemLinks.html(playerNameInputPSN.val());
-                $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
+                dropDownList.append(listItem);
+                localStorage.setItem("fav", dropDownList.html());
               });
             } else {
               error.css("visibility", "visible");
@@ -291,7 +303,6 @@ $(function () {
                 listItem.append(listItemLinks);
                 listItemLinks.html(playerNameInputXbox.val());
                 $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
               });
             } else {
               error
@@ -394,7 +405,6 @@ $(function () {
                 listItem.append(listItemLinks);
                 listItemLinks.html(playerNameInputPc.val());
                 $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
               });
             } else {
               error
@@ -418,9 +428,5 @@ $(function () {
     ) {
       $("#dropDown").toggleClass("toggleList");
     }
-  });
-
-  playerSearchButton.on("click", function () {
-    $("#share-cont").css("display", "block");
   });
 });
