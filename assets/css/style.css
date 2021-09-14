@@ -134,7 +134,7 @@ hr {
 }
 
 .curow {
-  position: absolute;
+  position: fixed;
   bottom: 230px;
   left: 600px;
   font-weight: 1000;
@@ -176,6 +176,7 @@ hr {
   left: 445px;
   z-index: -1;
 }
+
 /* Contact Us Styling */
 /* ------------------ */
 
@@ -387,6 +388,48 @@ label {
   #favorites-Text {
     font-size: 1rem;
   }
+  /* Contact Us responsive 500px*/
+  .logo-background {
+    position: relative;
+    left: 20px;
+    top: 10px;
+    margin: 0 auto;
+    height: auto;
+    background-size: 5px 1px;
+  }
+
+  #octane {
+    position: fixed;
+    top: 160px;
+    left: 35px;
+    height: 650px;
+  }
+
+  .curow {
+    position: fixed;
+    left: 160px;
+    bottom: 240px;
+  }
+
+  .names {
+    position: fixed;
+    bottom: 130px;
+    left: 175px;
+  }
+
+  .contactEmail {
+    position: absolute;
+    bottom: 55px;
+    left: 95px;
+  }
+
+  .repoAddress {
+    position: absolute;
+    bottom: 20px;
+    left: 105px;
+  }
+  /* Contact Us responsive 500px */
+  /* --------------------------- */
 }
 
 @media screen and (max-width: 400px) {
@@ -416,4 +459,47 @@ label {
   #favorites-Text {
     font-size: 1rem;
   }
+
+  /* Contact Us responsive 400px */
+  .logo-background {
+    position: relative;
+    left: -10px;
+    top: 10px;
+    margin: 0 auto;
+    height: auto;
+    background-size: 5px 1px;
+  }
+
+  #octane {
+    position: fixed;
+    top: 160px;
+    left: 0px;
+    height: 650px;
+  }
+
+  .curow {
+    position: fixed;
+    left: 135px;
+    bottom: 290px;
+  }
+
+  .names {
+    position: fixed;
+    bottom: 180px;
+    left: 155px;
+  }
+
+  .contactEmail {
+    position: absolute;
+    bottom: 55px;
+    left: 75px;
+  }
+
+  .repoAddress {
+    position: absolute;
+    bottom: 20px;
+    left: 95px;
+  }
+  /* Contact Us responsive 400px */
+  /* --------------------------- */
 }
