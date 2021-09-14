@@ -409,6 +409,7 @@ $(function () {
     }
   });
 
+  // Display Share Button
   playerSearchButton.on("click", function () {
     $("#share-cont").css("display", "block");
   });
