@@ -100,13 +100,13 @@ hr {
   height: 780px;
   width: 290px;
   position: absolute;
-  right: -270px;
+  right: -400px;
   top: -120px;
 }
 
 #aboutUsText {
   position: absolute;
-  left: 360px;
+  left: 495px;
   top: 250px;
   width: 50%;
   height: auto;
@@ -136,7 +136,7 @@ hr {
 .curow {
   position: fixed;
   bottom: 230px;
-  left: 600px;
+  left: 885px;
   font-weight: 1000;
   font-size: 1.3rem;
 }
@@ -144,7 +144,7 @@ hr {
 .names {
   position: fixed;
   bottom: 100px;
-  left: 615px;
+  left: 899px;
   font-weight: bolder;
 }
 
@@ -166,14 +166,14 @@ hr {
 
 .logo-background {
   position: absolute;
-  left: 425px;
+  left: 750px;
 }
 
 #octane {
   height: 900px;
   width: auto;
   position: fixed;
-  left: 445px;
+  left: 700px;
   z-index: -1;
 }
 
