@@ -271,6 +271,15 @@ label {
   video {
     width: 100%;
   }
+
+  #share-cont {
+    display: none;
+    border-radius: 25px;
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    left: 359px;
+  }
 }
 /* Pushing changes up to main to resolve desktop styling for favorites pictures not showing */
 
@@ -287,12 +296,30 @@ label {
     width: 5%;
     height: 50px;
   }
+
+  #share-cont {
+    display: none;
+    border-radius: 25px;
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    left: 288px;
+  }
 }
 
 @media screen and (width: 1920px) {
   #favorites {
     width: 3%;
     height: 50px;
+  }
+
+  #share-cont {
+    display: none;
+    border-radius: 25px;
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    left: 579px;
   }
 }
 
@@ -329,6 +356,15 @@ label {
   #favorites-Text {
     font-size: 1.5rem;
   }
+
+  #share-cont {
+    display: none;
+    border-radius: 25px;
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    left: 362px;
+  }
 }
 
 /* Mobile Layout */
@@ -358,6 +394,15 @@ label {
 
   #favorites-Text {
     font-size: 1.5rem;
+  }
+
+  #share-cont {
+    display: none;
+    border-radius: 25px;
+    position: relative;
+    bottom: 30px;
+    width: 100px;
+    left: 209px;
   }
 }
 
