@@ -178,7 +178,7 @@ label {
   margin: 0 auto;
   border: solid 2px black;
   border-top-width: none;
-  transition: height 2s;
+  overflow: scroll;
 }
 
 .toggleList {
