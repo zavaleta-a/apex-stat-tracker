@@ -156,7 +156,7 @@ $(function () {
         headers: {
           "x-rapidapi-host": "apex-legends.p.rapidapi.com",
           "x-rapidapi-key":
-            "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+            "02893924bfmshe946457e53f4bc1p1d45c5jsncc9393577c87",
         },
       }).then(function (resp) {
         return resp.json().then(function (data) {
