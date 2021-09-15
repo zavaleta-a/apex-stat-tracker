@@ -22,10 +22,36 @@ $(function () {
   var playerNameInputXbox = $("<input type='username' />");
   var playerNameLabelPc = $("<label>Username: </label>");
   var playerNameInputPc = $("<input type='username' />");
-  var addToFav = $(
-    "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
-  );
+  var dropDownList = $("#dropDown-list");
   // Handle on dynamically created HTML elements //
+
+  var favoritePlayersNames = [];
+
+  renderFavorites();
+  // Array of favorite players
+
+  function renderFavorites() {
+    // Get the list from local storage and store in local variable
+    favoritePlayersNames = JSON.parse(localStorage.getItem("fav"));
+    if (!favoritePlayersNames) {
+      favoritePlayersNames = [];
+    }
+    // Clear the container (ul)
+    dropDownList.empty();
+    // Loop through the list from localStorage and append to ul
+    for (let i = 0; i < favoritePlayersNames.length; i++) {
+      var listItem = $("<li></li>");
+      var listItemLinks = $("<a></a>");
+      listItem.append(listItemLinks);
+      listItemLinks.html(
+        favoritePlayersNames[i].playerName +
+          " (" +
+          favoritePlayersNames[i].platform +
+          ")"
+      );
+      dropDownList.append(listItem);
+    }
+  }
 
   // If screen reaches large desktop or higher, add a class to center logo and adjust width //
   var mq = matchMedia("(min-width: 992px)");
@@ -100,313 +126,129 @@ $(function () {
     // IF BACK BUTTON IS CLICKED //
 
     playerSearchButton.on("click", function () {
-      // IF PLAYSTATION DATABASE IS SEARCHED //
-      if ($("h6").html() === "Playstation Database") {
-        var url =
-          "https://apex-legends.p.rapidapi.com/stats/" +
-          playerNameInputPSN.val() +
-          "/PS4";
-        // fetch
-        fetch(url, {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
-            "x-rapidapi-key":
-              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
-          },
-        }).then(function (resp) {
-          return resp.json().then(function (data) {
-            if (resp.ok) {
-              error.css("visibility", "hidden");
-              $("#empty-Vid-Container").empty();
-              var statBox = $("<div id='statBox' class='row'></div>");
-              statBox.css({
-                height: "250px",
-                borderStyle: "solid",
-                borderColor: "red",
-              });
-              $("#empty-Vid-Container").append(statBox);
-              // Current Level Box //
-              var levelBox = $(
-                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
-              );
-              levelBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(levelBox);
-              levelBox
-                .append(insertBreak)
-                .append($("<span></span>").html(data.global.level));
-              // Recently Used Legend Box //
-              var legendBox = $(
-                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
-              );
-              legendBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(legendBox);
-              legendBox
-                .append(insertBreak)
-                .append(
-                  $("<span></span>").html(data.legends.selected.LegendName)
-                );
-              // Division Box //
-
-              var divisionBox = $(
-                "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
-              );
-              divisionBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(divisionBox);
-              divisionBox.append(
-                $("<span></span>").html(data.global.rank.rankName)
-              );
-              // Rank Box //
-              var rankBox = $(
-                "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
-              );
-              rankBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(rankBox);
-              rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
-              statBox.append(addToFav);
-              addToFav.on("click", function () {
-                var listItem = $("<li></li>");
-                var listItemLinks = $("<a></a>");
-                listItem.append(listItemLinks);
-                listItemLinks.html(playerNameInputPSN.val());
-                $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
-              });
-            } else {
-              error.css("visibility", "visible");
-            }
-          });
-        });
-        // fetch
-        // IF PLAYSTATION DATABASE IS SEARCHED //
-
-        // IF XBOX DATABASE IS SEARCHED //
-      } else if ($("h6").html() === "Xbox Database") {
-        var url =
+      // Facebook Share Button Dynamic Styling //
+      $("#share-cont").css("display", "block");
+      // Facebook Share Button Dynamic Styling //
+      var url =
+        "https://apex-legends.p.rapidapi.com/stats/" +
+        playerNameInputPSN.val() +
+        "/PS4";
+      var targetInput = playerNameInputPSN;
+      var platform = "Playstation";
+      if ($("h6").html() === "Xbox Database") {
+        url =
           "https://apex-legends.p.rapidapi.com/stats/" +
           playerNameInputXbox.val() +
           "/X1";
-        // fetch
-        fetch(url, {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
-            "x-rapidapi-key":
-              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
-          },
-        }).then(function (resp) {
-          return resp.json().then(function (data) {
-            if (resp.ok) {
-              error.css("visibility", "hidden");
-              $("#empty-Vid-Container").empty();
-              var statBox = $("<div id='statBox' class='row'></div>");
-              statBox.css({
-                height: "250px",
-                borderStyle: "solid",
-                borderColor: "red",
-              });
-              $("#empty-Vid-Container").append(statBox);
-              // Current Level Box //
-              var levelBox = $(
-                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
-              );
-              levelBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(levelBox);
-              levelBox
-                .append(insertBreak)
-                .append($("<span></span>").html(data.global.level));
-              // Recently Used Legend Box //
-              var legendBox = $(
-                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
-              );
-              legendBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(legendBox);
-              legendBox
-                .append(insertBreak)
-                .append(
-                  $("<span></span>").html(data.legends.selected.LegendName)
-                );
-              // Division Box //
-
-              var divisionBox = $(
-                "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
-              );
-              divisionBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(divisionBox);
-              divisionBox.append(
-                $("<span></span>").html(data.global.rank.rankName)
-              );
-              // Rank Box //
-              var rankBox = $(
-                "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
-              );
-              rankBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(rankBox);
-              rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
-              // ADD TO FAVORITES BUTTON //
-              statBox.append(addToFav);
-              addToFav.on("click", function () {
-                var listItem = $("<li></li>");
-                var listItemLinks = $("<a></a>");
-                listItem.append(listItemLinks);
-                listItemLinks.html(playerNameInputXbox.val());
-                $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
-              });
-            } else {
-              error
-                .text("GamerTag Must Contain A Value!")
-                .css("visibility", "visible");
-            }
-          });
-        });
-        // fetch
-        // IF XBOX DATABASE IS SEARCHED //
-
-        // IF PC DATABASE IS SEARCHED //
-      } else {
-        var url =
+        platform = "Xbox";
+        targetInput = playerNameInputXbox;
+      } else if ($("h6").html() === "PC Database") {
+        url =
           "https://apex-legends.p.rapidapi.com/stats/" +
           playerNameInputPc.val() +
           "/PC";
-        // fetch
-        fetch(url, {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "apex-legends.p.rapidapi.com",
-            "x-rapidapi-key":
-              "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
-          },
-        }).then(function (resp) {
-          return resp.json().then(function (data) {
-            if (resp.ok) {
-              error.css("visibility", "hidden");
-              $("#empty-Vid-Container").empty();
-              var statBox = $("<div id='statBox' class='row'></div>");
-              statBox.css({
-                height: "250px",
-                borderStyle: "solid",
-                borderColor: "red",
-              });
-              $("#empty-Vid-Container").append(statBox);
-              // Current Level Box //
-              var levelBox = $(
-                "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
-              );
-              levelBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(levelBox);
-              levelBox
-                .append(insertBreak)
-                .append($("<span></span>").html(data.global.level));
-              // Recently Used Legend Box //
-              var legendBox = $(
-                "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
-              );
-              legendBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(legendBox);
-              legendBox
-                .append(insertBreak)
-                .append(
-                  $("<span></span>").html(data.legends.selected.LegendName)
-                );
-              // Division Box //
-
-              var divisionBox = $(
-                "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
-              );
-              divisionBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(divisionBox);
-              divisionBox.append(
-                $("<span></span>").html(data.global.rank.rankName)
-              );
-              // Rank Box //
-              var rankBox = $(
-                "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
-              );
-              rankBox.css({
-                height: "110px",
-                borderStyle: "solid",
-                borderColor: "black",
-                fontWeight: "bolder",
-              });
-              statBox.append(rankBox);
-              rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
-              // ADD TO FAVORITES BUTTON //
-              statBox.append(addToFav);
-              addToFav.on("click", function () {
-                var listItem = $("<li></li>");
-                var listItemLinks = $("<a></a>");
-                listItem.append(listItemLinks);
-                listItemLinks.html(playerNameInputPc.val());
-                $("#dropDown-list").append(listItem);
-                localStorage.setItem("fav", listItem.html());
-              });
-            } else {
-              error
-                .text("Username Must Contain A Value!")
-                .css("visibility", "visible");
-            }
-            // fetch
-            // IF PC DATABASE IS SEARCHED //
-          });
-        });
+        targetInput = playerNameInputPc;
+        platform = "PC";
       }
-      // End Of Else //
+      // fetch
+      fetch(url, {
+        method: "GET",
+        headers: {
+          "x-rapidapi-host": "apex-legends.p.rapidapi.com",
+          "x-rapidapi-key":
+            "6669d5edcfmsh0a1b6b64e531adap1a09d1jsn0b4c7917e6bc",
+        },
+      }).then(function (resp) {
+        return resp.json().then(function (data) {
+          if (resp.ok) {
+            error.css("visibility", "hidden");
+            $("#empty-Vid-Container").empty();
+            var statBox = $("<div id='statBox' class='row'></div>");
+            statBox.css({
+              height: "250px",
+              borderStyle: "solid",
+              borderColor: "red",
+            });
+            $("#empty-Vid-Container").append(statBox);
+            // Current Level Box //
+            var levelBox = $(
+              "<div id='level' class='center-align col s6'><div style='text-Decoration: underline'>Current Level</div></div>"
+            );
+            levelBox.css({
+              height: "110px",
+              borderStyle: "solid",
+              borderColor: "black",
+              fontWeight: "bolder",
+            });
+            statBox.append(levelBox);
+            levelBox
+              .append(insertBreak)
+              .append($("<span></span>").html(data.global.level));
+            // Recently Used Legend Box //
+            var legendBox = $(
+              "<div id='legend' class='center-align col s6'><span style='text-Decoration: underline'>Recently Used Legend</span></div>"
+            );
+            legendBox.css({
+              height: "110px",
+              borderStyle: "solid",
+              borderColor: "black",
+              fontWeight: "bolder",
+            });
+            statBox.append(legendBox);
+            legendBox
+              .append(insertBreak)
+              .append(
+                $("<span></span>").html(data.legends.selected.LegendName)
+              );
+            // Division Box //
+
+            var divisionBox = $(
+              "<div id='division' class='center-align col s6'><div style='text-Decoration: underline'>Division</div></div>"
+            );
+            divisionBox.css({
+              height: "110px",
+              borderStyle: "solid",
+              borderColor: "black",
+              fontWeight: "bolder",
+            });
+            statBox.append(divisionBox);
+            divisionBox.append(
+              $("<span></span>").html(data.global.rank.rankName)
+            );
+            // Rank Box //
+            var rankBox = $(
+              "<div id='legend' class='center-align col s6'><div style='text-Decoration: underline'>Division Rank</div></div>"
+            );
+            rankBox.css({
+              height: "110px",
+              borderStyle: "solid",
+              borderColor: "black",
+              fontWeight: "bolder",
+            });
+            statBox.append(rankBox);
+            rankBox.append($("<span></span>").html(data.global.rank.rankDiv));
+            var addToFav = $(
+              "<div id='Faves' class='col s12 center-align'><button>Add To Favorites</button></div>"
+            );
+            statBox.append(addToFav);
+            addToFav.on("click", function () {
+              var newfav = {
+                playerName: targetInput.val(),
+                platform: platform,
+              };
+              // Add list items to the array to an array
+              favoritePlayersNames.push(newfav);
+
+              // Save that list of items to local storage
+              localStorage.setItem("fav", JSON.stringify(favoritePlayersNames));
+              // Call render method (Reads from localstorage loops through localStorage and creates list items)
+              renderFavorites();
+            });
+          } else {
+            error.css("visibility", "visible");
+          }
+        });
+      });
     });
     // End Of PlayerSearchButton //
   });
@@ -418,10 +260,5 @@ $(function () {
     ) {
       $("#dropDown").toggleClass("toggleList");
     }
-  });
-
-  // Display Share Button
-  playerSearchButton.on("click", function () {
-    $("#share-cont").css("display", "block");
   });
 });
